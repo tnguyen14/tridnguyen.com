@@ -156,7 +156,7 @@ module.exports = function(grunt) {
 				tasks: ['copy']
 			},
 			grunt: {
-				files: ['tasks/*', 'Gruntfile.js'],
+				files: ['tasks/**/*.js', 'Gruntfile.js'],
 				tasks: ['process']
 			}
 		}
