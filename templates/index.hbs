@@ -1,4 +1,9 @@
 {{> header}}
-	<body>
-		<h1>{{config.site-name}}</h1>
+	{{#each articles}}
+		{{#with content}}
+			{{debug this}}
+			<h2>{{title}}</h2>
+			<h3>{{date}}</h3>
+		{{/with}}
+	{{/each}}
 {{> footer}}
