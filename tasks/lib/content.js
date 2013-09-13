@@ -6,9 +6,7 @@ exports.init = function (grunt) {
 		jsYAML = require('js-yaml'),
 		moment = require('moment'),
 		_ = grunt.util._,
-		marked = require('marked'),
-		VerEx = require('verbal-expressions');
-
+		marked = require('marked');
 	var exports = {};
 
 	// Helper functions
