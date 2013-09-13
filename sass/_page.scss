@@ -4,9 +4,15 @@ body {
 }
 
 p {
-	line-height: 1.4;
+	line-height: 1.5;
 }
 
+a {
+	color: $dark-orange;
+	&:hover {
+		color: $orange;
+	}
+}
 .main-header {
 	@include clearfix;
 	padding: 1em 0;
@@ -51,6 +57,8 @@ p {
 	.site-tagline {
 		font-size: 1em;
 		font-weight: 500;
+		line-height: 1.4;
+		margin-top: 0.5em;
 	}
 }
 
@@ -68,4 +76,20 @@ p {
 }
 .article-title {
 	margin-top: 0.5em;
+}
+
+.nav-link {
+	font-size: 1.2em;
+	margin: 1em 0;
+	a {
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.main-footer {
+	margin: 2em 0;
+	text-align: center;
 }
