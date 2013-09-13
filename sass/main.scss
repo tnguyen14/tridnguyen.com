@@ -1,5 +1,7 @@
 // Vendor Dependencies
 @import "../components/bourbon/_bourbon";
+$FontAwesomePath: "/components/font-awesome/font";
+@import "../components/font-awesome/scss/font-awesome";
 @import "global/_normalize";
 
 // Authored Dependencies
