@@ -6,7 +6,8 @@ exports.init = function (grunt) {
 		jsYAML = require('js-yaml'),
 		moment = require('moment'),
 		_ = grunt.util._,
-		marked = require('marked');
+		marked = require('marked'),
+		VerEx = require('verbal-expressions');
 
 	var exports = {};
 
@@ -123,7 +124,7 @@ exports.init = function (grunt) {
 				// convert new line characters to html line breaks
 				// markdown = nl2br(markdown);
 
-				content['content'] = markdown;
+				content['main'] = markdown;
 				// content['content'] = '';
 
 			} catch (e) {
@@ -131,8 +132,8 @@ exports.init = function (grunt) {
 			}
 		}
 
-		// add support for date using moment.js http://momentjs.com/
 		if (content) {
+			// add support for date using moment.js http://momentjs.com/
 			if(!content.date) {
 				content.date = fs.statSync(filepath).ctime;
 			}
@@ -146,6 +147,13 @@ exports.init = function (grunt) {
 					grunt.log.writeln('The date used in ' + filepath + ' is not supported.');
 				}
 			}
+
+			// // add full path for images
+			// var image = /<img src=\"(.*\.jpg|png)\"/;
+			// if (content.main) {
+			// 	console.log(content.url);
+			// 	content.main = content.main.replace(image, '<img src=\"' + content.url + "/$1\"");
+			// }
 		}
 		return content;
 	};

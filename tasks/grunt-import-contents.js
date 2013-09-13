@@ -72,9 +72,15 @@ module.exports = function (grunt) {
 				}
 				filecontent.url = '/' + path.dirname(relpath);
 
+				// add full path for images
+				var image = /<img src=\"(.*\.(jpg|png))\"/g;
+				if (filecontent.main) {
+					filecontent.main = filecontent.main.replace(image, '<img src=\"' + filecontent.url + "/$1\"");
+				}
+
+				// Put content to the contentTree
 				// start at the top of the content tree
 				var currentDir = contentTree;
-
 				// iterate through the directory path
 				for (var obj in directories) {
 					// if the directory doesn't exist yet, create an empty object in the content tree
