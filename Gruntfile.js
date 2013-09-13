@@ -49,7 +49,7 @@ module.exports = function(grunt) {
 			build: {
 				files: [
 					{expand: true, cwd: 'contents/', src: '**/*.{jpg,png}', dest: '<%= config.buildPath %>/'},
-					{expand: true, cwd: 'sass', src: 'assets/**/*.{jpg,png,gif}', dest: '<%= config.buildPath %>/css/'}
+					{expand: true, cwd: 'sass', src: 'assets/**/*', dest: '<%= config.buildPath %>/css/'}
 				]
 			}
 		},
