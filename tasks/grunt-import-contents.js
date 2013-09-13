@@ -70,6 +70,7 @@ module.exports = function (grunt) {
 				if (!filecontent.filepath) {
 					filecontent.filepath = relpath;
 				}
+				filecontent.url = '/' + path.dirname(relpath);
 
 				// start at the top of the content tree
 				var currentDir = contentTree;
