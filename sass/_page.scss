@@ -89,12 +89,18 @@ code {
 }
 
 .nav-link {
+	@include clearfix;
 	font-size: 1.2em;
 	margin: 1em 0;
 	a {
+		display: block;
+		float: left;
 		text-decoration: none;
 		&:hover {
 			text-decoration: underline;
+		}
+		&.next {
+			float: right;
 		}
 	}
 }

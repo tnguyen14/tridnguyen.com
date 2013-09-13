@@ -6,4 +6,13 @@
 			<h3>{{date}}</h3>
 			{{{main}}}
 		{{/each}}
+
+		<div class="nav-link">
+			{{#if content.prevUrl}}
+				<a class="prev" href="{{content.prevUrl}}"><i class="icon-arrow-left"></i> Previous</a>
+			{{/if}}
+			{{#if content.nextUrl}}
+				<a class="next" href="{{content.nextUrl}}">Next <i class="icon-arrow-right"></i></a>
+			{{/if}}
+	</div>
 {{> footer}}
