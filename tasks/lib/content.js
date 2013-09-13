@@ -190,6 +190,13 @@ exports.init = function (grunt) {
 			// add correct filepath
 			archivePage.filepath = path.join(key, pageNum.toString(), 'index.html');
 			archivePage.url = path.join('/', key, pageNum.toString());
+
+			if (pageNum != numPages) {
+				archivePage.prevUrl = path.join('/', key, (pageNum + 1).toString());
+			}
+			if (pageNum != 1) {
+				archivePage.nextUrl = path.join('/', key, (pageNum - 1).toString());
+			}
 		}
 
 		// put posts into each archive page
