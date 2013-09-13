@@ -121,10 +121,10 @@ exports.init = function (grunt) {
 				// convert markdown data to html
 				var markdown = marked(sections.join('---'));
 				// convert new line characters to html line breaks
-				markdown = nl2br(markdown);
+				// markdown = nl2br(markdown);
 
-				// content['markdown'] = markdown;
-				content['markdonw'] = '';
+				content['content'] = markdown;
+				// content['content'] = '';
 
 			} catch (e) {
 				grunt.fail.fatal(e + ' .Failed to parse markdown data from ' + filepath);
@@ -190,9 +190,8 @@ exports.init = function (grunt) {
 			_.extend(archivePage['posts'], posts[i]);
 		}
 
-		// copy object 1 to index.html
-		archive['index.html'] = archive['1']['index.html'];
-		archive['index.html'].filepath = path.join(key, 'index.html');
+		// simplify filepath for archive 1
+		archive['1']['index.html'].filepath = path.join(key, 'index.html');
 
 		return archive;
 	};

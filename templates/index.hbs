@@ -1,8 +1,7 @@
 {{> header}}
-	{{#each articles}}
-		{{#with content}}
-			<h2>{{title}}</h2>
-			<h3>{{date}}</h3>
+	<section class="main-content">
+		{{#with archives/articles}}
+			{{> feed}}
 		{{/with}}
-	{{/each}}
+	</section><!-- .main-content -->
 {{> footer}}
