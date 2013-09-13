@@ -103,13 +103,21 @@ module.exports = function (grunt) {
 			// paginate if something is specified
 			if (!_.isEmpty(paginateOptions)) {
 				// store all directories' archives
-				var archives = {};
+				var archives = contentTree.contents.archives = {};
 				// iterate through global content object
 				// only support archive at top level
 				_(contentTree.contents).forEach(function(dir, key) {
 					if ( paginateOptions.hasOwnProperty(key) ) {
 						var archive = content.paginate(dir, key, paginateOptions[key]);
+
+						// make the first page of archive available at top level
+						if (archive['1']) {
+							archive['index.html'] = archive['1']['index.html'];
+						}
 						_.extend(contentTree.contents[key], archive);
+
+						// also make this archive available for a special archive portion of the contentTree
+						contentTree.contents.archives[key] = archive;
 					}
 				});
 			}

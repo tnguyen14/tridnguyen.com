@@ -1,0 +1,52 @@
+body {
+	margin: 0 auto;
+	width: 90%;
+}
+
+.main-header {
+	@include clearfix;
+	margin-top: 2em;
+}
+
+.main-nav {
+	@include clearfix;
+	float: left;
+	width: 50%;
+	height: 8em;
+	li {
+		float: left;
+		list-style: none;
+		margin-right: 2em;
+	}
+	a {
+		color: #444;
+		font-size: 1.4em;
+		text-decoration: none;
+	}
+}
+
+.about {
+	float: right;
+	width: 50%;
+	height: 8em;
+	.site-title {
+		font-size: 1.5em;
+		margin: 0;
+	}
+	.site-tagline {
+		font-size: 1em;
+		font-weight: 500;
+	}
+}
+
+.personal {
+	border-radius: 50%;
+	float: left;
+	margin-right: 2em;
+	width: 8em;
+	height: auto;
+}
+
+.post-single {
+	margin-top: 2em;
+}

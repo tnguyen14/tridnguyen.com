@@ -1,0 +1,14 @@
+{{#getPage '1'}}
+	{{#each posts}}
+		<article class="post-single">
+			<h2>{{title}}</h2>
+			{{{content}}}
+		</article><!-- .post-single -->
+	{{/each}}
+{{/getPage}}
+
+<div class="nav-link prev">
+	{{#getPage '2'}}
+		<a href="{{filepath}}">Read more</a>
+	{{/getPage}}
+</div>
