@@ -58,7 +58,7 @@ module.exports = function(grunt) {
 				options: {
 					base: '<%= config.buildPath %>',
 					branch: 'master',
-					remote: 'gh-pages'
+					repo: 'git@github.com:tnguyen14/tnguyen14.github.io.git'
 				},
 				src: ['**/*']
 			}
