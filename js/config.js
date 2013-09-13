@@ -16,6 +16,9 @@ require.config({
 		},
 		handlebars: {
 			exports: 'Handlebars'
+		},
+		prism: {
+			exports: 'Prism'
 		}
 	},
 
