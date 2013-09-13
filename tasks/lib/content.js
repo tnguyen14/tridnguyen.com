@@ -181,6 +181,7 @@ exports.init = function (grunt) {
 			archivePage.posts = {};
 			// add correct filepath
 			archivePage.filepath = path.join(key, pageNum.toString(), 'index.html');
+			archivePage.url = path.join('/', key, pageNum.toString());
 		}
 
 		// put posts into each archive page
@@ -192,6 +193,7 @@ exports.init = function (grunt) {
 
 		// simplify filepath for archive 1
 		archive['1']['index.html'].filepath = path.join(key, 'index.html');
+		archive['1']['index.html'].url = path.join('/', key);
 
 		return archive;
 	};
