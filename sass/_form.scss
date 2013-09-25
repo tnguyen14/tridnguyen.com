@@ -1,0 +1,29 @@
+.field-group {
+	margin-bottom: 1em;
+	label {
+		margin-bottom: 0.5em;
+	}
+	input,
+	textarea {
+		display: block;
+		line-height: 1.5;
+		margin-top: 0.5em;
+		width: 100%;
+	}
+	.message {
+		height: 6em;
+	}
+}
+input[type='submit'] {
+	background-color: $orange;
+	border: 1px solid $dark-orange;
+	border-radius: 4px;
+	color: $light-gray;
+	padding: 0.5em 1em;
+	&:hover {
+		background-color: $dark-orange;
+	}
+}
+.contact-form {
+	width: 70%;
+}

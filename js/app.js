@@ -4,24 +4,38 @@ define(function (require) {
 		$ = require('jquery'),
 		Prism = require('prism');
 
+	require('validation');
+
 	$(document).ready(function(){
 		Prism.highlightAll();
 		$('#contact input[type="submit"]').click(function(){
 			var $form = $('#contact');
-			$.ajax({
-				url: "http://localhost:3000/forms/2",
-				data: $form.serialize(),
-				type: "POST",
-				success: function(data, status){
-					console.log(data);
-					$form.html('Thank you! Your message has been received.');
-				},
-				error: function(error) {
-					if (error) {
-						console.log(error);
+			$form.validate({
+				rules: {
+					name: "required",
+					message: "required",
+					email: {
+						required: true,
+						email: true
 					}
 				}
-			});
+			})
+			if ($form.valid()) {
+				$.ajax({
+					url: "http://inspired-forms.herokuapp.com/forms/2",
+					data: $form.serialize(),
+					type: "POST",
+					success: function(data, status){
+						console.log(data);
+						$form.html('Thank you! Your message has been received.');
+					},
+					error: function(error) {
+						if (error) {
+							console.log(error);
+						}
+					}
+				});
+			}
 			return false;
 		});
 	});

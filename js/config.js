@@ -7,7 +7,8 @@ require.config({
 		json: 'components/requirejs-plugins/src/json',
 		handlebars: 'components/handlebars/handlebars',
 		jquery: 'components/jquery/jquery.min',
-		prism: 'js/lib/prism'
+		prism: 'js/lib/prism',
+		validation: 'components/jquery.validation/jquery.validate'
 	},
 
 	// load non-amd dependencies
@@ -20,6 +21,9 @@ require.config({
 		},
 		prism: {
 			exports: 'Prism'
+		},
+		validation: {
+			deps: ['jquery']
 		}
 	},
 
