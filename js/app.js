@@ -22,7 +22,7 @@ define(function (require) {
 			})
 			if ($form.valid()) {
 				$.ajax({
-					url: "http://inspired-forms.herokuapp.com/forms/2",
+					url: "http://inspired-forms.herokuapp.com/forms/1",
 					data: $form.serialize(),
 					type: "POST",
 					success: function(data, status){
