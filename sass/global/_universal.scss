@@ -1,0 +1,32 @@
+body {
+	// background: url(assets/squairy_light.png);
+	margin: 0 auto;
+	position: relative;
+	width: 95%;
+	@include at-least( 40em ) {
+		width: 90%;
+	}
+	@include at-least( 55em ) {
+		width: 85%;
+	}
+}
+
+p {
+	line-height: 1.5;
+}
+
+a {
+	color: $dark-orange;
+	&:hover {
+		color: $orange;
+	}
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+code {
+	background-color: $light-gray;
+}

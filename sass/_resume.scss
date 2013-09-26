@@ -1,0 +1,44 @@
+.resume {
+	.section-title {
+		text-align: center;
+	}
+	.item {
+		line-height: 1.4;
+	}
+	.item-header {
+		font-size: 1.1em;
+		margin-bottom: 0.5em;
+	}
+	.row {
+		@include clearfix;
+	}
+	.position {
+		font-size: 1.1em;
+		font-style: italic;
+		float: left;
+	}
+	.duration {
+		float: right;
+	}
+	.work-single {
+		border-bottom: 1px solid $gray;
+	}
+	.degree {
+		font-style: italic;
+		float: left;
+	}
+	.graduation {
+		float: right;
+	}
+
+	.comma-item {
+		&:after {
+			content: ",";
+		}
+		&:last-child {
+			&:after {
+				content: "";
+			}
+		}
+	}
+}

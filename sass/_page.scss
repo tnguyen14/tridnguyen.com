@@ -1,136 +1,12 @@
-body {
-	background: url(assets/squairy_light.png);
-	margin: 0 auto;
-	position: relative;
-	width: 95%;
-	@include at-least( 40em ) {
-		width: 90%;
-	}
-	@include at-least( 55em ) {
-		width: 85%;
-	}
-}
-
-p {
-	line-height: 1.5;
-}
-
-a {
-	color: $dark-orange;
-	&:hover {
-		color: $orange;
-	}
-}
-
-img {
-	width: 100%;
-	height: auto;
-}
-
-code {
-	background-color: $light-gray;
-}
-
-.main-header {
-	@include clearfix;
-	padding: 0 0 1em;
-}
-
-.main-nav {
-	@include clearfix;
-	@include at-least ( 40em ) {
-		float: left;
-		width: 100%;
-	}
-	@include at-least( 55em ) {
-		margin-top: 1em;
-		width: 55%;
-	}
-	.main-menu {
-		@include clearfix;
-		padding-left: 0;
-	}
-	ul {
-		float: left;
-		@include at-least( 40em ) {
-			border-bottom: 1px solid $orange;
-		}
-		@include at-least( 55em ) {
-			border: none;
-		}
-	}
-	li {
-		list-style: none;
-		margin-right: 0.5em;
-		padding: 0.8em;
-		@include at-least( 26.25em ) {
-			float: left;
-		}
-		&:last-child {
-			margin-right: 0;
-		}
-		&:hover {
-			background-color: $orange;
-			cursor: pointer;
-		}
-
-	}
-	a {
-		color: #444;
-		font-size: 1.4em;
-		text-decoration: none;
-	}
-	i {
-		margin-right: 0.5em;
-	}
-}
-
-.about {
-	position: absolute;
-	bottom: 2em;
-	@include at-least( 40em ) {
-		border-bottom: 1px solid $orange;
-		float: right;
-		margin-top: 1em;
-		position: relative;
-		bottom: auto;
-		width: 65%;
-	}
-	@include at-least( 55em ) {
-		border: none;
-		width: 45%;
-	}
-	.site-title {
-		font-size: 1.5em;
-		margin: 0;
-	}
-	.site-tagline {
-		font-size: 1em;
-		font-weight: 500;
-		line-height: 1.4;
-		margin-top: 0.5em;
-		@include at-least( 40em ) {
-
-		}
-	}
-	// image
-	.personal {
-		border-radius: 50%;
-		float: left;
-		margin: 0 1em 0.5em 0;
-		width: 6em;
-		height: auto;
-	}
-}
-
 .post-single {
-	border-bottom: 1px solid #e0e0e0;
+	border-bottom: 1px solid $gray;
 	padding: 1em 0;
 }
 .article-title {
 	margin-top: 0.5em;
 }
 
+// bottom navigation links
 .nav-link {
 	@include clearfix;
 	font-size: 1.2em;
@@ -145,13 +21,5 @@ code {
 		&.next {
 			float: right;
 		}
-	}
-}
-
-.main-footer {
-	margin: 10em 0 2em;
-	text-align: center;
-	@include at-least( 40em ) {
-		margin-top: 2em;
 	}
 }
