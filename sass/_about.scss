@@ -1,8 +1,21 @@
 .about-page {
+	@include clearfix;
+	p {
+		&:first-of-type {
+			margin-top: 0;
+		}
+	}
 	.feature {
 		float: right;
 		margin: 0 0 1em 2em;
 		width: 15em;
 		height: auto;
+	}
+	.resume {
+		@extend %button;
+		display: block;
+		float: left;
+		margin-top: 1em;
+		text-decoration: none;
 	}
 }
