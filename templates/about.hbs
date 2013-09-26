@@ -1,0 +1,15 @@
+{{! custom header}}
+{{> head}}
+	<div class="main-header">
+		{{> nav}}
+	</div><!-- .main-header -->
+	<h1>About</h1>
+	<div class="about-page">
+		<img class="feature" src="{{content.feature}}"/>
+		{{{content.main}}}
+
+		<div class="resume">
+			{{> resume}}
+		</div><!-- .resume -->
+	</div><!-- .about -->
+{{> footer}}

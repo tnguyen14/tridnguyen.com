@@ -1,0 +1,44 @@
+{{> head}}
+	<div class="main-header">
+		{{> nav}}
+	</div><!-- .main-header -->
+	<h1>Resume</h1>
+	{{content.intro}}
+	{{#if work}}
+		<h2>Work Experience</h2>
+		{{#each work}}
+			<div class="work-single">
+				<h3>{{company}}
+				{{#if location}}
+					- {{location}}
+				{{/if}}
+				{{#if website}}
+					({{website}})
+				{{/if}}
+				</h3>
+				<div class="position">{{position}}</div>
+				<div class="duration">{{duration}}</div>
+				{{{main}}}
+			</div><!-- .work-single -->
+		{{/each}}
+	{{/if}} {{! work }}
+	{{#if education}}
+		<h2>Education</h2>
+		{{#each education}}
+			<h3>{{school}}
+			{{#if location}}
+				- {{location}}
+			{{/if}}
+			</h3>
+			<div class"graduation">{{graduation-date}}</div>
+			<div class="degree">{{degree}}, {{majors}}</div>
+			<div class="gpa">Cumulative GPA: {{gpa}}</div>
+			<div class="honors-awards">
+				<h4>Honors and Awards</h4>
+				{{#each honors-awards}}
+					{{this}}
+				{{/each}}
+			</div>
+		{{/each}}
+	{{/if}} {{! education}}
+{{> footer}}
