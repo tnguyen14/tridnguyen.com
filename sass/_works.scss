@@ -1,0 +1,26 @@
+.work-viewer {
+	@include clearfix;
+	.feature-images {
+		float: left;
+		width: 50%;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.description {
+		float: right;
+		width: 50%;
+	}
+}
+
+.work-singles {
+	@include clearfix;
+}
+.work-single {
+	float: left;
+	.preview {
+		width: 12em;
+		height: auto;
+	}
+}
