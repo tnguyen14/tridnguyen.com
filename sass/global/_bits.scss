@@ -29,3 +29,15 @@ $light-gray: #f2f2f2;
 		@content
 	}
 }
+
+// Patterns
+%button {
+	background-color: $orange;
+	border: 1px solid $dark-orange;
+	border-radius: 4px;
+	color: $light-gray;
+	padding: 0.5em 1em;
+	&:hover {
+		background-color: $dark-orange;
+	}
+}
