@@ -10,4 +10,34 @@
 
 		<a class="resume" href="/resume">Resume</a>
 	</div><!-- .about -->
+
+	<div class="works">
+		<h2>Works</h2>
+		<div class="work-viewers">
+			{{#each works}}
+				{{#step 1}}
+				<div class="work-viewer">
+					<div class="feature-images">
+						{{#each feature}}
+							<img src="{{../url}}/{{this}}"/>
+						{{/each}}
+					</div><!-- .feature-images -->
+					<div class="description">
+						{{{main}}}
+					</div>
+				</div><!-- .work-viewer -->
+				{{/step}}
+			{{/each}}
+		</div><!-- .work-viewer -->
+		<div class="work-singles">
+			{{#each works}}
+				{{#step 1}}
+					<div class="work-single">
+						<img class="preview" src="{{url}}/{{array feature 0}}"/>
+						<h3 class="work-title">{{title}}</h3>
+					</div><!-- .work-single -->
+				{{/step}}
+			{{/each}}{{! works}}
+		</div><!-- .work-singles -->
+	</div><!-- .works -->
 {{> footer}}
