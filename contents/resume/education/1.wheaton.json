@@ -1,0 +1,14 @@
+{
+	"school": "Wheaton College",
+	"location": "Norton, MA",
+	"graduation-date": "Expected 05/2014",
+	"degree": "BA",
+	"majors": "Computer Science, Economics",
+	"gpa": "3.91/4.00",
+	"honors-awards": [
+		"Phi Beta Kappa (09/2013)",
+		"President's Award (2013)",
+		"Dean's List (2010, 2011, 2012, 2013)",
+		"Techpaths Student Fellow (2013)"
+	]
+}
