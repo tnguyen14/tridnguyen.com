@@ -8,7 +8,14 @@ $FontAwesomePath: "assets/font";
 // Authored Dependencies
 @import "global/_bits";
 
+// Components
+// universal styles
+@import "global/_universal";
+@import "global/_header";
+@import "global/_footer";
+
 // Pages
 @import "_page";
 @import "_form";
 @import "_about";
+@import "_resume";

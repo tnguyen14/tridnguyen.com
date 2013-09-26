@@ -1,0 +1,7 @@
+.main-footer {
+	margin: 10em 0 2em;
+	text-align: center;
+	@include at-least( 40em ) {
+		margin-top: 2em;
+	}
+}

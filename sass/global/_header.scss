@@ -1,0 +1,91 @@
+.main-header {
+	@include clearfix;
+}
+
+.main-nav {
+	@include clearfix;
+	@include at-least ( 40em ) {
+		float: left;
+		width: 100%;
+	}
+	@include at-least( 55em ) {
+		margin-top: 2em;
+		width: 55%;
+	}
+	.main-menu {
+		@include clearfix;
+		margin: 0;
+		padding-left: 0;
+	}
+	ul {
+		float: left;
+		@include at-least( 40em ) {
+			border-bottom: 1px solid $orange;
+		}
+		@include at-least( 55em ) {
+			border: none;
+		}
+	}
+	li {
+		list-style: none;
+		margin-right: 0.5em;
+		@include at-least( 26.25em ) {
+			float: left;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	a {
+		color: #444;
+		display: block;
+		font-size: 1.4em;
+		padding: 0.5em;
+		text-decoration: none;
+		&:hover {
+			background-color: $orange;
+			cursor: pointer;
+		}
+	}
+	i {
+		margin-right: 0.5em;
+	}
+}
+
+.about {
+	position: absolute;
+	bottom: 2em;
+	@include at-least( 40em ) {
+		border-bottom: 1px solid $orange;
+		float: right;
+		margin-top: 1em;
+		position: relative;
+		bottom: auto;
+		width: 65%;
+	}
+	@include at-least( 55em ) {
+		border: none;
+		width: 45%;
+	}
+	.site-title {
+		font-size: 1.5em;
+		margin: 0;
+	}
+	.site-tagline {
+		font-size: 1em;
+		font-weight: 500;
+		line-height: 1.4;
+		margin-top: 0.5em;
+		@include at-least( 40em ) {
+
+		}
+	}
+	// image
+	.personal {
+		border-radius: 50%;
+		float: left;
+		margin: 0 1em 0.5em 0;
+		width: 6em;
+		height: auto;
+	}
+}
