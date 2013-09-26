@@ -1,3 +1,30 @@
 $orange: #e67e22;
 $dark-orange: #d35400;
 $light-gray: #f2f2f2;
+
+// Media queries
+
+// CSS Tricks Naming Media Query
+// @mixin breakpoint($point) {
+//   @if $point == papa-bear {
+//     @media (max-width: 1600px) { @content; }
+//   }
+//   @else if $point == mama-bear {
+//     @media (max-width: 1250px) { @content; }
+//   }
+//   @else if $point == baby-bear {
+//     @media (max-width: 650px)  { @content; }
+//   }
+// }
+
+@mixin at-least( $width ) {
+	@media (min-width: $width) {
+		@content
+	}
+}
+
+@mixin at-most( $width ) {
+	@media (max-width: $width) {
+		@content
+	}
+}

@@ -1,7 +1,14 @@
 body {
 	background: url(assets/squairy_light.png);
 	margin: 0 auto;
-	width: 90%;
+	position: relative;
+	width: 95%;
+	@include at-least( 40em ) {
+		width: 90%;
+	}
+	@include at-least( 55em ) {
+		width: 85%;
+	}
 }
 
 p {
@@ -30,28 +37,48 @@ code {
 }
 
 .main-nav {
-	float: left;
-	width: 55%;
-	height: 6em;
+	@include clearfix;
+	@include at-least ( 40em ) {
+		float: left;
+		width: 100%;
+	}
+	@include at-least( 55em ) {
+		margin-top: 1em;
+		width: 55%;
+	}
 	.main-menu {
 		@include clearfix;
 		padding-left: 0;
 	}
-	li {
-		border-radius: 4px;
+	ul {
 		float: left;
+		@include at-least( 40em ) {
+			border-bottom: 1px solid $orange;
+		}
+		@include at-least( 55em ) {
+			border: none;
+		}
+	}
+	li {
 		list-style: none;
+		margin-right: 0.5em;
+		padding: 0.8em;
+		@include at-least( 26.25em ) {
+			float: left;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+		&:hover {
+			background-color: $orange;
+			cursor: pointer;
+		}
 
 	}
 	a {
 		color: #444;
 		font-size: 1.4em;
-		padding: 0.8em;
 		text-decoration: none;
-		&:hover {
-			background-color: $light-gray;
-			cursor: pointer;
-		}
 	}
 	i {
 		margin-right: 0.5em;
@@ -59,9 +86,20 @@ code {
 }
 
 .about {
-	float: right;
-	width: 45%;
-	height: 6em;
+	position: absolute;
+	bottom: 2em;
+	@include at-least( 40em ) {
+		border-bottom: 1px solid $orange;
+		float: right;
+		margin-top: 1em;
+		position: relative;
+		bottom: auto;
+		width: 65%;
+	}
+	@include at-least( 55em ) {
+		border: none;
+		width: 45%;
+	}
 	.site-title {
 		font-size: 1.5em;
 		margin: 0;
@@ -71,15 +109,18 @@ code {
 		font-weight: 500;
 		line-height: 1.4;
 		margin-top: 0.5em;
-	}
-}
+		@include at-least( 40em ) {
 
-.personal {
-	border-radius: 50%;
-	float: left;
-	margin-right: 1em;
-	width: 6em;
-	height: auto;
+		}
+	}
+	// image
+	.personal {
+		border-radius: 50%;
+		float: left;
+		margin: 0 1em 0.5em 0;
+		width: 6em;
+		height: auto;
+	}
 }
 
 .post-single {
@@ -108,6 +149,9 @@ code {
 }
 
 .main-footer {
-	margin: 2em 0;
+	margin: 10em 0 2em;
 	text-align: center;
+	@include at-least( 40em ) {
+		margin-top: 2em;
+	}
 }
