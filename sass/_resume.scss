@@ -1,15 +1,23 @@
 .resume {
 	.section {
-		// border-bottom: 1px solid $dark-orange;
 		padding-bottom: 1em;
-		// &:last-of-type {
-		// 	border: none;
-		// }
 	}
 	.section-title {
 		font-family: "Merriweather", serif;
 		font-weight: 700;
 		text-align: center;
+	}
+	.networks {
+		@include clearfix;
+		margin-top: 1em;
+		.link {
+			float: left;
+			margin-right: 1em;
+		}
+		a {
+			font-size: 1.5em;
+			text-decoration: none;
+		}
 	}
 	.item {
 		line-height: 1.4;

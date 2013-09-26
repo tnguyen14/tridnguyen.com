@@ -1,5 +1,8 @@
 {
 	"title": "Resume",
 	"template": "resume.hbs",
-	"intro": "I make website and web applications."
+	"intro": "I make website and web applications.",
+	"twitter": "tridnguyen",
+	"github": "tnguyen14",
+	"linkedin": "triduynguyen"
 }
