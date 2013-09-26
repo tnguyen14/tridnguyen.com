@@ -3,65 +3,81 @@
 		{{> nav}}
 	</div><!-- .main-header -->
 	<div class="resume">
-		<h1>Resume</h1>
+		<h1 class="page-title">Resume</h1>
 		<div class="intro">{{content.intro}}</div>
 		{{#if work}}
-			<h2 class="section-title">Work Experience</h2>
-			{{#each work}}
-				<div class="work-single item">
-					<h3 class="item-header">{{company}}
-					{{#if location}}
-						- {{location}}
-					{{/if}}
-					{{#if website}}
-						({{website}})
-					{{/if}}
-					</h3>
-					<div class="item-meta row">
-						<div class="position">{{position}}</div>
-						<div class="duration">{{duration}}</div>
-					</div>
-					<div class="item-description">
-						{{{main}}}
-					</div><!-- .item-description -->
-				</div><!-- .work-single -->
-			{{/each}}
+			<div class="work section">
+				<h2 class="section-title">Work Experience</h2>
+				{{#each work}}
+					<div class="work-single item">
+						<h3 class="item-header">{{company}}
+						{{#if location}}
+							- {{location}}
+						{{/if}}
+						{{#if website}}
+							({{website}})
+						{{/if}}
+						</h3>
+						<div class="item-meta row">
+							<div class="position">{{position}}</div>
+							<div class="duration">{{duration}}</div>
+						</div>
+						<div class="item-description">
+							{{{main}}}
+						</div><!-- .item-description -->
+					</div><!-- .work-single -->
+				{{/each}}
+			</div><!-- .work -->
 		{{/if}} {{! work }}
 		{{#if education}}
-			<h2 class="section-title">Education</h2>
-			{{#each education}}
-				<div class="item">
-					<h3 class="item-header">{{school}}
-					{{#if location}}
-						- {{location}}
-					{{/if}}
-					</h3>
-					<div class="row">
-						<div class="degree">{{degree}}, {{majors}}</div>
-						<div class="graduation">{{graduation-date}}</div>
-					</div>
-					<div class="gpa">Cumulative GPA: {{gpa}}</div>
-					<div class="honors-awards">
-						<h3 class="item-header">Honors and Awards</h3>
-						<ul>
-						{{#each honors-awards}}
-							<li>{{this}}</li>
-						{{/each}}
-						</ul>
-					</div><!-- .honors-awards -->
-				</div><!-- .item -->
-			{{/each}}
+			<div class="education section">
+				<h2 class="section-title">Education</h2>
+				{{#each education}}
+					<div class="item">
+						<h3 class="item-header">{{school}}
+						{{#if location}}
+							- {{location}}
+						{{/if}}
+						</h3>
+						<div class="row">
+							<div class="degree">{{degree}}, {{majors}}</div>
+							<div class="graduation">{{graduation-date}}</div>
+						</div>
+						<div class="gpa">Cumulative GPA: {{gpa}}</div>
+						<div class="honors-awards">
+							<h3 class="item-header">Honors and Awards</h3>
+							<ul>
+							{{#each honors-awards}}
+								<li>{{this}}</li>
+							{{/each}}
+							</ul>
+						</div><!-- .honors-awards -->
+					</div><!-- .item -->
+				{{/each}}
+			</div><!-- .education -->
 		{{/if}} {{! education}}
 		{{#if skills}}
-			<h2 class="section-title">Skills</h2>
-			{{#each skills}}
-				<div>
-					<span>{{title}}: </span>
-					{{#each skills}}
-						<span class="comma-item">{{this}}</span>
-					{{/each}}
-				</div>
-			{{/each}}
+			<div class="skills section">
+				<h2 class="section-title">Skills</h2>
+				{{#each skills}}
+					<div class="item">
+						<span class="skill-title">{{title}}: </span>
+						{{#each skills}}
+							<span class="comma-item">{{this}}</span>
+						{{/each}}
+					</div>
+				{{/each}}
+			</div><!-- .skills -->
 		{{/if}} {{! skills}}
+		{{#if cocurricular}}
+			<div class="cocurricular section">
+				<h2 class="section-title">Co-Curricular Activities</h2>
+				{{#each cocurricular}}
+					{{#each this}}
+						<li>{{position}} - {{{organization}}}</li>
+					{{/each}}
+				{{/each}}
+			</div><!-- .cocurricular -->
+		{{/if}} {{! cocurricular}}
 	</div><!-- .resume -->
 {{> footer}}

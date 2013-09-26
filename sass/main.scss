@@ -1,9 +1,12 @@
 // Vendor Dependencies
 @import "../components/bourbon/_bourbon";
-$FontAwesomePath: "assets/font";
-@import "../components/font-awesome/scss/font-awesome";
 @import "assets/prism.css";
 @import "global/_normalize";
+
+// Fonts
+$FontAwesomePath: "assets/font";
+@import "../components/font-awesome/scss/font-awesome";
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,400italic|Merriweather:400,700);
 
 // Authored Dependencies
 @import "global/_bits";

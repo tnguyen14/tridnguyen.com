@@ -1,5 +1,14 @@
 .resume {
+	.section {
+		// border-bottom: 1px solid $dark-orange;
+		padding-bottom: 1em;
+		// &:last-of-type {
+		// 	border: none;
+		// }
+	}
 	.section-title {
+		font-family: "Merriweather", serif;
+		font-weight: 700;
 		text-align: center;
 	}
 	.item {
@@ -22,6 +31,9 @@
 	}
 	.work-single {
 		border-bottom: 1px solid $gray;
+		&:last-of-type {
+			border: none;
+		}
 	}
 	.degree {
 		font-style: italic;
@@ -30,7 +42,9 @@
 	.graduation {
 		float: right;
 	}
-
+	.skill-title {
+		font-style: italic;
+	}
 	.comma-item {
 		&:after {
 			content: ",";
