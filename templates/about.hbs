@@ -16,18 +16,7 @@
 		<div class="work-viewers">
 			{{#each works}}
 				{{#step 1}}
-				<div class="work-viewer" id="{{slug}}">
-					<div class="feature-images">
-						{{#each feature}}
-							<div><a rel="{{../title}}" class="fancybox" title="{{this.caption}}" href="{{../url}}/{{this.source}}"><img src="{{../url}}/{{this.source}}" /></a></div>
-						{{/each}}
-					</div><!-- .feature-images -->
-					<div class="description">
-						{{{main}}}
-					</div>
-					<i class="closeicon icon-remove-sign"></i>
-
-				</div><!-- .work-viewer -->
+					{{> work-viewer}}
 				{{/step}}
 			{{/each}}
 		</div><!-- .work-viewers -->

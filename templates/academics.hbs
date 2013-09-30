@@ -1,0 +1,10 @@
+{{> header}}
+{{{content.main}}}
+<h2>Course Reflections</h2>
+{{#each courses}}
+	<div class="course">
+		<h3>{{title}}</h3>
+		{{{main}}}
+	</div>
+{{/each}}
+{{> footer}}
