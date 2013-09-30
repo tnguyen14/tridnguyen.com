@@ -4,8 +4,10 @@
 		float: left;
 		width: 50%;
 		img {
-			width: 100%;
 			height: auto;
+			max-height: 30em;
+			width: auto;
+			max-width: 100%;
 		}
 	}
 	.description {

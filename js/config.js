@@ -8,7 +8,9 @@ require.config({
 		handlebars: 'components/handlebars/handlebars',
 		jquery: 'components/jquery/jquery.min',
 		prism: 'js/lib/prism',
-		validation: 'components/jquery.validation/jquery.validate'
+		validation: 'components/jquery.validation/jquery.validate',
+		bxslider: 'components/bxslider/jquery.bxSlider.min',
+		fancybox: 'components/fancybox/source/jquery.fancybox.pack'
 	},
 
 	// load non-amd dependencies
@@ -23,6 +25,12 @@ require.config({
 			exports: 'Prism'
 		},
 		validation: {
+			deps: ['jquery']
+		},
+		bxslider: {
+			deps: ['jquery']
+		},
+		fancybox: {
 			deps: ['jquery']
 		}
 	},

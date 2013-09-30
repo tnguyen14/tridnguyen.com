@@ -5,6 +5,8 @@ define(function (require) {
 		Prism = require('prism');
 
 	require('validation');
+	require('bxslider');
+	require('fancybox');
 
 	$(document).ready(function(){
 		Prism.highlightAll();
@@ -38,5 +40,12 @@ define(function (require) {
 			}
 			return false;
 		});
+
+		// works bxslider
+		$(".feature-images").each(function(){
+			$(this).bxSlider();
+		});
+
+		$(".fancybox").fancybox();
 	});
 });
