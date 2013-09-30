@@ -19,6 +19,8 @@
     "normalize-scss": "~2.1.2",
     "jquery": "~2.0.3",
     "font-awesome": "~3.2.1",
-    "jquery.validation": "~1.11.1"
+    "jquery.validation": "~1.11.1",
+    "bxslider": "*",
+    "fancybox": "~2.1.5"
   }
 }

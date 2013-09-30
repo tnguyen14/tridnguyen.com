@@ -19,7 +19,7 @@
 				<div class="work-viewer">
 					<div class="feature-images">
 						{{#each feature}}
-							<img src="{{../url}}/{{this}}"/>
+							<div><a rel="{{../title}}" class="fancybox" title="{{this.caption}}" href="{{../url}}/{{this.source}}"><img src="{{../url}}/{{this.source}}" /></a></div>
 						{{/each}}
 					</div><!-- .feature-images -->
 					<div class="description">
@@ -28,12 +28,13 @@
 				</div><!-- .work-viewer -->
 				{{/step}}
 			{{/each}}
-		</div><!-- .work-viewer -->
+		</div><!-- .work-viewers -->
 		<div class="work-singles">
 			{{#each works}}
 				{{#step 1}}
 					<div class="work-single">
-						<img class="preview" src="{{url}}/{{array feature 0}}"/>
+						{{! preview is the first image}}
+						<img class="preview" src="{{url}}/{{feature.[0].source}}"/>
 						<h3 class="work-title">{{title}}</h3>
 					</div><!-- .work-single -->
 				{{/step}}
