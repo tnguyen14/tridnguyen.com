@@ -1,5 +1,8 @@
 .work-viewer {
 	@include clearfix;
+	background-color: $gray;
+	&.active {
+	}
 	.feature-images {
 		float: left;
 		width: 50%;
@@ -10,9 +13,12 @@
 			max-width: 100%;
 		}
 	}
+	.bx-wrapper {
+		float: left;
+	}
 	.description {
 		float: right;
-		width: 50%;
+		width: 48%;
 	}
 }
 
