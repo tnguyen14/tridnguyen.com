@@ -1,5 +1,5 @@
 ---
-title: Boston.com redesign prototype,
+title: Boston.com redesign prototype
 slug: bcom
 feature:
 - source: bcom.png
