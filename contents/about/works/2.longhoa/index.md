@@ -1,5 +1,6 @@
 ---
 title: Long Hoa
+slug: longhoa
 feature:
 - source: longhoa.png
 ---

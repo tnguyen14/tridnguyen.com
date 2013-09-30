@@ -41,11 +41,25 @@ define(function (require) {
 			return false;
 		});
 
-		// works bxslider
+		// works
 		$(".feature-images").each(function(){
 			$(this).bxSlider();
 		});
 
 		$(".fancybox").fancybox();
+
+		$(".work-viewer").each(function() {
+			$(this).addClass('visuallyhidden');
+		});
+		$(".work-single").click(function(){
+			var slug = $(this).data('work');
+			$(".work-viewer").each(function(){
+				if ($(this).data('work') === slug) {
+					$(this).addClass('active').removeClass('visuallyhidden');
+				} else {
+					$(this).removeClass('active').addClass('visuallyhidden');
+				}
+			})
+		});
 	});
 });
