@@ -67,9 +67,15 @@
 	@include clearfix;
 }
 .work-single {
+	cursor: pointer;
 	float: left;
+	margin: 0 2% 1em;
+	width: 29.3333%;
 	.preview {
-		width: 12em;
-		height: auto;
+		height: 10em;
+		img {
+			width: 100%;
+			height: auto
+		}
 	}
 }
