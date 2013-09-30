@@ -36,7 +36,9 @@
 				{{#step 1}}
 					<div class="work-single" data-work="{{slug}}">
 						{{! preview is the first image}}
-						<img class="preview" src="{{url}}/{{feature.[0].source}}"/>
+						<div class="preview">
+							<img src="{{url}}/{{feature.[0].source}}"/>
+						</div>
 						<h3 class="work-title">{{title}}</h3>
 					</div><!-- .work-single -->
 				{{/step}}
