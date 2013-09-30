@@ -26,6 +26,11 @@
 	.feature-images {
 		float: left;
 		width: 50%;
+		a {
+			display: block;
+			text-align: center;
+			@include clearfix;
+		}
 		img {
 			height: auto;
 			max-height: 15em;

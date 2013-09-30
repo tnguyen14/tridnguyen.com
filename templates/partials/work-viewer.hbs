@@ -1,0 +1,14 @@
+<div class="work-viewer" id="{{slug}}">
+	<div class="feature-images">
+		{{#each feature}}
+			<div>
+				<a rel="{{../title}}" class="fancybox" title="{{this.caption}}" href="{{../url}}/{{this.source}}"><img src="{{../url}}/{{this.source}}" /></a>
+			</div>
+		{{/each}}
+	</div><!-- .feature-images -->
+	<div class="description">
+		<h3>{{title}}</h3>
+		{{{main}}}
+	</div>
+	<i class="closeicon icon-remove-sign"></i>
+</div><!-- .work-viewer -->
