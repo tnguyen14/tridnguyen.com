@@ -43,7 +43,10 @@ define(function (require) {
 
 		// works
 		$(".feature-images").each(function(){
-			$(this).bxSlider();
+			$(this).bxSlider({
+				'prevText': '',
+				'nextText': ''
+			});
 		});
 
 		$(".fancybox").fancybox();
@@ -51,9 +54,10 @@ define(function (require) {
 		$(".work-viewer").each(function() {
 			$(this).addClass('visuallyhidden');
 		});
-		$(".work-single").click(function(){
+
+		$(".work-single").click(function() {
 			var slug = $(this).data('work');
-			$(".work-viewer").each(function(){
+			$(".work-viewer").each(function() {
 				if ($(this).data('work') === slug) {
 					$(this).addClass('active').removeClass('visuallyhidden');
 				} else {
@@ -61,5 +65,10 @@ define(function (require) {
 				}
 			})
 		});
+		$(".closeicon").click(function() {
+			$(".work-viewer").each(function() {
+				$(this).removeClass('active').addClass('visuallyhidden');
+			})
+		})
 	});
 });
