@@ -1,12 +1,18 @@
 .work-viewers {
 	margin-bottom: 2em;
 	position: relative;
+	&:hover {
+		.closeicon {
+			opacity: 1;
+		}
+	}
 	.closeicon {
 		cursor: pointer;
 		font-size: 1.5em;
+		opacity: 0.4;
 		position: absolute;
-		top: 5px;
-		right: 5px;
+		top: 8px;
+		right: 8px;
 	}
 }
 .work-viewer {
@@ -73,9 +79,16 @@
 	width: 29.3333%;
 	.preview {
 		height: 10em;
+		overflow: hidden;
+		&:hover {
+			filter: sepia(40%);
+		}
 		img {
 			width: 100%;
 			height: auto
 		}
+	}
+	.work-title {
+		color: $dark-orange;
 	}
 }
