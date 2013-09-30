@@ -132,6 +132,18 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		autoprefixer: {
+			dev: {
+				src: '<%= config.buildPath %>/css/main.css',
+				dest: '<%= config.buildPath %>/css/main.css'
+			}
+		},
+		csso: {
+			prod: {
+				src: '<%= config.buildPath %>/css/main.css',
+				dest: '<%= config.buildPath %>/css/main.css'
+			}
+		},
 		fix_sourcemaps: {
 			prod: ['<%= config.buildPath %>/app.js.map']
 		},
@@ -141,7 +153,7 @@ module.exports = function(grunt) {
 			},
 			css: {
 				files: ['sass/**/*.scss'],
-				tasks: ['compass:dev']
+				tasks: ['sass:dev', 'autoprefixer:dev']
 			},
 			contents: {
 				files: ['contents/**/*.{json,md}'],
@@ -206,7 +218,8 @@ module.exports = function(grunt) {
 		'import_contents',
 		'copy',
 		'handlebars_html:dev',
-		'sass:dev'
+		'sass:dev',
+		'autoprefixer:dev'
 	]);
 
 	grunt.registerTask('dev', [
@@ -220,6 +233,8 @@ module.exports = function(grunt) {
 		'copy',
 		'handlebars_html:prod',
 		'sass:prod',
+		'autoprefixer',
+		'csso:prod',
 		'requirejs:prod',
 		'fix_sourcemaps:prod'
 	]);
