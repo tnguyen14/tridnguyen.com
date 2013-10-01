@@ -11,8 +11,8 @@
 		font-size: 1.5em;
 		opacity: 0.4;
 		position: absolute;
-		top: 8px;
-		right: 8px;
+		top: -8px;
+		right: -8px;
 	}
 }
 .work-viewer {
@@ -24,8 +24,10 @@
 		visibility: visible;
 	}
 	.feature-images {
-		float: left;
-		width: 50%;
+		@include at-least( 62.5em ) {
+			float: left;
+			width: 50%;
+		}
 		a {
 			display: block;
 			text-align: center;
@@ -36,6 +38,12 @@
 			max-height: 30em;
 			width: auto;
 			max-width: 100%;
+		}
+	}
+	.description {
+		@include at-least( 62.5em ) {
+			float: right;
+			width: 42%;
 		}
 	}
 	.work-title {
@@ -55,25 +63,22 @@
 		font-family: "FontAwesome";
 		font-size: 1.8em;
 		opacity: 0.4;
+		padding: 0.5em;
 		position: absolute;
 		text-decoration: none;
 		top: 50%;
 	}
 	.bx-prev {
-		left: 5px;
+		left: 0;
 		&:before {
 			content: "\f137";
 		}
 	}
 	.bx-next {
-		right: 5px;
+		right: 0;
 		&:before {
 			content: "\f138";
 		}
-	}
-	.description {
-		float: right;
-		width: 42%;
 	}
 }
 
@@ -81,12 +86,25 @@
 	@include clearfix;
 
 	.work-single {
+		border: 5px solid transparent;
 		cursor: pointer;
 		float: left;
-		margin: 0 2% 2em;
-		width: 29.3333%;
+		@include at-least( 42em ) {
+			margin: 0 4% 2em;
+			width: 42%;
+		}
+		@include at-least( 62.5em ) {
+			margin: 0 2% 2em;
+			width: 29.333%;
+		}
+		&.active {
+			border-color: $orange;
+		}
 		.preview {
-			height: 10em;
+			height: 15em;
+			@include at-least( 42em ) {
+				height: 10em;
+			}
 			overflow: hidden;
 			&:hover {
 				filter: sepia(40%);

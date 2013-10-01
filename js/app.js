@@ -61,6 +61,9 @@ define(function (require) {
 			var slug = $(this).data('work'),
 				$viewer = $('#' + slug);
 
+			$('.work-single').not(this).removeClass('active');
+			$(this).addClass('active');
+
 			$viewers.not('#' + slug).removeClass('active').addClass('visuallyhidden');
 			$viewer.toggleClass('active').toggleClass('visuallyhidden');
 		});
