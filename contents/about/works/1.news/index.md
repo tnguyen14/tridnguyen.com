@@ -2,11 +2,11 @@
 title: News site redesign prototype
 slug: bcom
 feature:
-- source: bcom.png
+- source: news.png
   caption: "Homepage with touch-friendly feature carousel"
-- source: bcom2.png
+- source: news2.png
   caption: "Main navigation menu"
-- source: bcom3.png
+- source: news3.png
   caption: "Infinitely scrolling feed with filter navigation bar"
 ---
 As a developer at Upstatement, I worked on a custom JavaScript application to prototype a redesign for big regional news website. The app features an infinitely scrolling feed that caters to the power users who want to stay updated with all the news of the day. The feed also includes a content filter to help users who come to the site with a specific topic in mind to easily focus on what they care about.
