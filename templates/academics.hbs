@@ -1,13 +1,13 @@
 {{> header}}
-<h2>Course Reflections</h2>
+<h1>Course Reflections</h1>
 <div class="course-intro">{{{content.main}}}</div>
 {{#each courses}}
 	<div class="course">
-		<h3>{{title}}
+		<h2>{{title}}
 			{{#if semester}}
 				<span class="semester"> - {{semester}}</span>
 			{{/if}}
-		</h3>
+		</h2>
 		{{{main}}}
 	</div>
 {{/each}}
