@@ -33,10 +33,13 @@
 		}
 		img {
 			height: auto;
-			max-height: 15em;
+			max-height: 30em;
 			width: auto;
 			max-width: 100%;
 		}
+	}
+	.work-title {
+		color: $dark-orange;
 	}
 	.bx-wrapper {
 		float: left;
@@ -80,7 +83,7 @@
 .work-single {
 	cursor: pointer;
 	float: left;
-	margin: 0 2% 1em;
+	margin: 0 2% 2em;
 	width: 29.3333%;
 	.preview {
 		height: 10em;
@@ -92,8 +95,5 @@
 			width: 100%;
 			height: auto
 		}
-	}
-	.work-title {
-		color: $dark-orange;
 	}
 }
