@@ -79,21 +79,22 @@
 
 .work-singles {
 	@include clearfix;
-}
-.work-single {
-	cursor: pointer;
-	float: left;
-	margin: 0 2% 2em;
-	width: 29.3333%;
-	.preview {
-		height: 10em;
-		overflow: hidden;
-		&:hover {
-			filter: sepia(40%);
-		}
-		img {
-			width: 100%;
-			height: auto
+
+	.work-single {
+		cursor: pointer;
+		float: left;
+		margin: 0 2% 2em;
+		width: 29.3333%;
+		.preview {
+			height: 10em;
+			overflow: hidden;
+			&:hover {
+				filter: sepia(40%);
+			}
+			img {
+				width: 100%;
+				height: auto
+			}
 		}
 	}
 }
