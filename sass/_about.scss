@@ -1,4 +1,6 @@
 .about-page {
+	border-bottom: 1px solid $gray;
+	padding-bottom: 1em;
 	@include clearfix;
 	p {
 		&:first-of-type {
@@ -6,10 +8,14 @@
 		}
 	}
 	.feature {
-		float: right;
-		margin: 0 0 1em 2em;
+		display: block;
+		margin: 0 auto 1em;
 		width: 15em;
 		height: auto;
+		@include at-least( 37.5em ) {
+			float: right;
+			margin: 0 0 1em 2em;
+		}
 	}
 	.about-link {
 		@extend %button;
