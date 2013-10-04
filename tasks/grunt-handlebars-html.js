@@ -19,10 +19,13 @@ module.exports = function (grunt) {
 
 	// site config
 	var config = grunt.file.readJSON('./config.json'),
-		config_dev = (grunt.file.exists('./config-dev.json')) ? grunt.file.readJSON('./config-dev.json') : {};
+		config_dev = (grunt.file.exists('./config-dev.json')) ? grunt.file.readJSON('./config-dev.json') : {},
+		env = grunt.task.current.target;
 
-	// config_dev will overwrite config
-	config_dev = _.extend(config, config_dev);
+	// config_dev will overwrite config in dev
+	if (env === 'dev') {
+		config_dev = _.extend(config, config_dev);
+	}
 
 	// Grunt task!
 	grunt.registerMultiTask('handlebars_html', 'write templates to html', function () {
@@ -61,7 +64,6 @@ module.exports = function (grunt) {
 		this.files.forEach(function (f) {
 			var path = require('path'),
 				templates = {},
-				env = grunt.task.current.target,
 				data = grunt.file.readJSON(f.data);
 			// filter out files that doesn't exist
 			f.src.filter(function (filepath) {
