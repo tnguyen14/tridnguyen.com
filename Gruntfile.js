@@ -7,23 +7,6 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 		config: grunt.file.readJSON('config-dev.json'),
-		compass: {
-			options: {
-				cssDir: '<%= config.buildPath %>/css',
-				sassDir: 'sass'
-			},
-			dev: {
-				options: {
-					outputStyle: 'expanded',
-					debugInfo: true
-				}
-			},
-			prod: {
-				options: {
-					outputStyle: 'compressed'
-				}
-			}
-		},
 		connect: {
 			dev: {
 				options: {
@@ -65,16 +48,6 @@ module.exports = function(grunt) {
 				files: [
 					{expand: true, cwd: 'contents', src: '**/*.{jpg,png,gif}', dest: '<%= config.buildPath%>/'}
 				]
-			}
-		},
-		'gh-pages': {
-			prod: {
-				options: {
-					base: '<%= config.buildPath %>',
-					branch: 'master',
-					repo: 'git@github.com:tnguyen14/tnguyen14.github.io.git'
-				},
-				src: ['**/*']
 			}
 		},
 		handlebars_html: {
@@ -160,6 +133,16 @@ module.exports = function(grunt) {
 		},
 		fix_sourcemaps: {
 			prod: ['<%= config.buildPath %>/app.js.map']
+		},
+		'gh-pages': {
+			prod: {
+				options: {
+					base: '<%= config.buildPath %>',
+					branch: 'master',
+					repo: 'git@github.com:tnguyen14/tnguyen14.github.io.git'
+				},
+				src: ['**/*']
+			}
 		},
 		watch: {
 			options: {
