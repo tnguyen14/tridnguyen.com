@@ -64,7 +64,8 @@ module.exports = function (grunt) {
 		this.files.forEach(function (f) {
 			var path = require('path'),
 				templates = {},
-				data = grunt.file.readJSON(f.data);
+				data = grunt.file.readJSON(f.data),
+				tally = 0;
 			// filter out files that doesn't exist
 			f.src.filter(function (filepath) {
 				// Warn on and remove invalid source files (if nonull was set).
@@ -112,9 +113,10 @@ module.exports = function (grunt) {
 							// write the compiled html to file
 							var outpath = path.join(f.dest, dirname, basename + '.html');
 							grunt.file.write(outpath, html);
-							grunt.log.writeln('"' + outpath + '" was created.');
+							grunt.verbose.ok('"' + outpath + '" was created.');
+							tally++;
 						} else {
-							grunt.log.writeln('Could not find template ' + content.template + ' for ' + key);
+							grunt.log.warn('Could not find template ' + content.template + ' for ' + key);
 						}
 					} else {
 						// Keep going deeper into the content tree if there is more
@@ -129,7 +131,7 @@ module.exports = function (grunt) {
 
 			// render all the contents
 			renderContent(data.contents);
-
+			grunt.log.writeln( 'Created ' + tally.toString().cyan + ' files.');
 		});
 	});
 
