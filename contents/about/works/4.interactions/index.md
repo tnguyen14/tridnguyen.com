@@ -1,6 +1,7 @@
 ---
 title: Interactions
 slug: interactions
+thumbnail: interactions-thumb.png
 feature:
 - source: interactions.png
   caption: ""

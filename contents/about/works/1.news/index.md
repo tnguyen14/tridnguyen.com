@@ -1,6 +1,7 @@
 ---
 title: News site redesign prototype
 slug: bcom
+thumbnail: news-thumb.png
 feature:
 - source: news.png
   caption: "Homepage with touch-friendly feature carousel"
