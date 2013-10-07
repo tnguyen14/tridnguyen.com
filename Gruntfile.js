@@ -35,18 +35,18 @@ module.exports = function(grunt) {
 					{expand: true, cwd: 'components', src: ['fancybox/source/**/*'], dest: '<%= config.buildPath %>/components'},
 					{expand: true, cwd: 'sass', src: 'assets/**/*', dest: '<%= config.buildPath %>/css/'}
 				]
-			},
-			// copy images for dev, optimize using imagemin only for production
-			images: {
-				files : [
-					{expand: true, cwd: 'contents', src: '**/*.{jpg,png,gif}', dest: '<%= config.buildPath%>/'}
-				]
 			}
 		},
 		imagemin: {
+			// build is done after responsive_images, dev is done before responsive_images
 			build: {
 				files: [
-					{expand: true, cwd: 'contents', src: '**/*.{jpg,png,gif}', dest: '<%= config.buildPath %>/'}
+					{expand: true, cwd: '<%= config.buildPath %>', src: '**/*.{jpg,png,gif}', dest: '<%= config.buildPath %>/'}
+				]
+			},
+			dev: {
+				files: [
+					{expand: true, cwd: 'contents', src: '**/*.{jpg,png,gif}', dest: 'contents'}
 				]
 			}
 		},
@@ -62,7 +62,7 @@ module.exports = function(grunt) {
 					}]
 				},
 				files: [
-					{expand: true, cwd: '<%= config.buildPath %>', src: '**/*.{jpg,png}', dest: '<%= config.buildPath %>'}
+					{expand: true, cwd: 'contents', src: '**/*.{jpg,png}', dest: '<%= config.buildPath %>'}
 				]
 			}
 		},
@@ -170,15 +170,19 @@ module.exports = function(grunt) {
 			},
 			contents: {
 				files: ['contents/**/*.{json,md}'],
-				tasks: ['process']
+				tasks: ['import_contents', 'handlebars_html:dev']
 			},
 			templates: {
 				files: ['templates/**/*.{hbs,html}'],
 				tasks: ['handlebars_html:dev']
 			},
 			images: {
-				files: ['contents/**/*.{jpg,png}', 'sass/assets/'],
-				tasks: ['copy']
+				files: ['contents/**/*.{jpg,png,gif}'],
+				tasks: ['imagemin:dev', 'responsive_images']
+			},
+			assets: {
+				files: ['sass/assets/'],
+				tasks: ['copy:build']
 			},
 			grunt: {
 				files: ['tasks/**/*.js', 'Gruntfile.js'],
@@ -229,24 +233,24 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('process', 'Process content files, render html and compile css', [
 		'import_contents',
-		'copy:images',
 		'copy:build',
-		'handlebars_html:dev',
-		'sass:dev',
-		'autoprefixer:dev'
+		'handlebars_html:dev'
 	]);
 
 	grunt.registerTask('dev', [
 		'process',
+		'imagemin:dev',
 		'responsive_images',
+		'sass:dev',
+		'autoprefixer:dev',
 		'connect:dev',
 		'watch'
 	]);
 
 	grunt.registerTask('build', [
 		'import_contents',
-		'imagemin:build',
 		'responsive_images',
+		'imagemin:build',
 		'copy:build',
 		'handlebars_html:prod',
 		'sass:prod',
