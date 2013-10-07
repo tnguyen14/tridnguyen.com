@@ -46,7 +46,23 @@ module.exports = function(grunt) {
 		imagemin: {
 			build: {
 				files: [
-					{expand: true, cwd: 'contents', src: '**/*.{jpg,png,gif}', dest: '<%= config.buildPath%>/'}
+					{expand: true, cwd: 'contents', src: '**/*.{jpg,png,gif}', dest: '<%= config.buildPath %>/'}
+				]
+			}
+		},
+		responsive_images: {
+			build: {
+				options: {
+					sizes: [{
+						name: 'small',
+						width: 500
+					}, {
+						name: 'medium',
+						width: 800
+					}]
+				},
+				files: [
+					{expand: true, cwd: '<%= config.buildPath %>', src: '**/*.{jpg,png}', dest: '<%= config.buildPath %>'}
 				]
 			}
 		},
@@ -214,6 +230,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('process', 'Process content files, render html and compile css', [
 		'import_contents',
 		'copy:images',
+		'responsive_images',
 		'copy:build',
 		'handlebars_html:dev',
 		'sass:dev',
@@ -229,6 +246,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('build', [
 		'import_contents',
 		'imagemin:build',
+		'responsive_images',
 		'copy:build',
 		'handlebars_html:prod',
 		'sass:prod',
