@@ -48,7 +48,9 @@ module.exports = function(grunt) {
 		copy: {
 			build: {
 				files: [
-					{expand: true, cwd: 'contents/', src: '**/*.{jpg,png}', dest: '<%= config.buildPath %>/'},
+					{expand: true, cwd: 'contents', src: '**/*.{jpg,png}', dest: '<%= config.buildPath %>/'},
+					{expand: true, src: ['CNAME'], dest: '<%= config.buildPath %>/'},
+					{expand: true, cwd: 'components', src: ['fancybox/source/**/*'], dest: '<%= config.buildPath %>/components'},
 					{expand: true, cwd: 'sass', src: 'assets/**/*', dest: '<%= config.buildPath %>/css/'}
 				]
 			}
