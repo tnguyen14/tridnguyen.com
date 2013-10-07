@@ -48,10 +48,22 @@ module.exports = function(grunt) {
 		copy: {
 			build: {
 				files: [
-					{expand: true, cwd: 'contents', src: '**/*.{jpg,png}', dest: '<%= config.buildPath %>/'},
 					{expand: true, src: ['CNAME'], dest: '<%= config.buildPath %>/'},
 					{expand: true, cwd: 'components', src: ['fancybox/source/**/*'], dest: '<%= config.buildPath %>/components'},
 					{expand: true, cwd: 'sass', src: 'assets/**/*', dest: '<%= config.buildPath %>/css/'}
+				]
+			},
+			// copy images for dev, optimize using imagemin only for production
+			images: {
+				files : [
+					{expand: true, cwd: 'contents', src: '**/*.{jpg,png,gif}', dest: '<%= config.buildPath%>/'}
+				]
+			}
+		},
+		imagemin: {
+			build: {
+				files: [
+					{expand: true, cwd: 'contents', src: '**/*.{jpg,png,gif}', dest: '<%= config.buildPath%>/'}
 				]
 			}
 		},
@@ -218,7 +230,8 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('process', 'Process content files, render html and compile css', [
 		'import_contents',
-		'copy',
+		'copy:images',
+		'copy:build',
 		'handlebars_html:dev',
 		'sass:dev',
 		'autoprefixer:dev'
@@ -232,7 +245,8 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('build', [
 		'import_contents',
-		'copy',
+		'imagemin:build',
+		'copy:build',
 		'handlebars_html:prod',
 		'sass:prod',
 		'autoprefixer',
@@ -245,10 +259,6 @@ module.exports = function(grunt) {
 		'build',
 		'gh-pages'
 	])
-
-	grunt.registerTask('prod', [
-
-	]);
 
 	grunt.registerTask('default', ['dev']);
 }
