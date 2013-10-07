@@ -1,6 +1,7 @@
 ---
 title: MIT Energy Club
 slug: mitec
+thumbnail: mitec-thumb.png
 feature:
 - source: mitec.png
   caption: ""

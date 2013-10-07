@@ -1,6 +1,7 @@
 ---
 title: Long Hoa
 slug: longhoa
+thumbnail: longhoa-thumb.png
 feature:
 - source: longhoa.png
   caption: "A place of compassion and respect"
