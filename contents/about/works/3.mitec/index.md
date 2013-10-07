@@ -3,11 +3,14 @@ title: MIT Energy Club
 slug: mitec
 thumbnail: mitec-thumb.png
 feature:
-- source: mitec.png
+- view: mitec-medium.png
+  full: mitec.png
   caption: ""
-- source: mitec2.png
+- view: mitec2-medium.png
+  full: mitec2.png
   caption: "Integration with EnergyFolks API for content"
-- source: mitec3.png
+- view: mitec3-medium.png
+  full: mitec3.png
   caption: "The users should at least be able to view the content comfortably on a smaller screen"
 ---
 This project was done for MIT Energy Club to help relaunch their program with better integration with [Energy Folks](https://www.energyfolks.com), a national network of students and professionals passionate about energy.

@@ -230,7 +230,6 @@ module.exports = function(grunt) {
 	grunt.registerTask('process', 'Process content files, render html and compile css', [
 		'import_contents',
 		'copy:images',
-		'responsive_images',
 		'copy:build',
 		'handlebars_html:dev',
 		'sass:dev',
@@ -239,6 +238,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('dev', [
 		'process',
+		'responsive_images',
 		'connect:dev',
 		'watch'
 	]);

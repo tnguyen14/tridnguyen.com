@@ -3,11 +3,14 @@ title: Long Hoa
 slug: longhoa
 thumbnail: longhoa-thumb.png
 feature:
-- source: longhoa.png
+- view: longhoa-medium.png
+  full: longhoa.png
   caption: "A place of compassion and respect"
-- source: longhoa2.png
+- view: longhoa2-medium.png
+  full: longhoa2.png
   caption: "Photo trails of trips and events"
-- source: longhoa3.png
+- view: longhoa3-medium.png
+  full: longhoa3.png
   caption: "Integration with Facebook"
 ---
 This project is a website made for a [non-profit organization](http://tinhnguyenlonghoa.org) who is trying to make a difference in the lives of homeless children residing in Long Hoa Orphanage in Ho Chi Minh City, Vietnam.
