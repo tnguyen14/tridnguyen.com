@@ -3,8 +3,10 @@ title: ThreeSixty
 slug: threesixty
 thumbnail: threesixty-thumb.png
 feature:
-- source: threesixty.png
+- view: threesixty-medium.png
+  full: threesixty.png
   caption: ""
-- source: threesixty2.png
+- viwe: threesixty2-medium.png
+  full: threesixty2.png
   caption: ""
 ---

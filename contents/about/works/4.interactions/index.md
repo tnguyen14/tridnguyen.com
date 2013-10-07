@@ -3,10 +3,13 @@ title: Interactions
 slug: interactions
 thumbnail: interactions-thumb.png
 feature:
-- source: interactions.png
+- view: interactions-medium.png
+  full: interactions.png
   caption: ""
-- source: interactions2.png
+- view: interactions2-medium.png
+  full: interactions2.png
   caption: ""
-- source: interactions3.png
+- view: interactions3-medium.png
+  full: interactions3.png
   caption: ""
 ---
