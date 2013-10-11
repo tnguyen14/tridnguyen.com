@@ -239,7 +239,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('dev', [
 		'process',
-		'imagemin:dev',
+		// 'imagemin:dev',
 		'responsive_images',
 		'sass:dev',
 		'autoprefixer:dev',
