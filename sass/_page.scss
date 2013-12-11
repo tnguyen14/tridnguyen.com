@@ -6,10 +6,28 @@
 .post-single {
 	border-bottom: 1px solid $gray;
 	padding: 1em 0;
+	h2, h3, h4, p {
+		margin: 0.8em 0 0.5em 0;
+	}
+	h2 {
+		font-size: 1.3em;
+	}
+	h3 {
+		font-size: 1.15em;
+	}
+	.article-title {
+		font-size: 1.5em;
+		margin-top: 0.5em;
+		a {
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+	}
 }
-.article-title {
-	margin-top: 0.5em;
-}
+
 
 // bottom navigation links
 .nav-link {

@@ -1,7 +1,7 @@
 {{#getPage '1'}}
 	{{#each posts}}
 		<article class="post-single">
-			<h2 class="article-title">{{title}}</h2>
+			<h2 class="article-title"><a href="{{url}}">{{title}}</a></h2>
 			{{{main}}}
 		</article><!-- .post-single -->
 	{{/each}}
