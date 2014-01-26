@@ -24,12 +24,12 @@ define(function (require) {
 			})
 			if ($form.valid()) {
 				$.ajax({
-					url: 'http://inspired-forms.herokuapp.com/forms/1',
+					url: 'http://inspired-forms.herokuapp.com/forms/52e49f41dd1cae0200000002',
 					data: $form.serialize(),
 					type: 'POST',
 					success: function(data, status){
 						console.log(data);
-						$form.html('Thank you! Your message has been received.');
+						$form.html('<p>Thank you! Your message has been received. I will be in touch shortly.</p>');
 					},
 					error: function(error) {
 						if (error) {
