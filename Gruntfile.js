@@ -177,7 +177,7 @@ module.exports = function(grunt) {
 			},
 			images: {
 				files: ['contents/**/*.{jpg,png,gif}'],
-				tasks: ['imagemin:dev', 'responsive_images']
+				tasks: ['newer:imagemin:dev', 'newer:responsive_images']
 			},
 			assets: {
 				files: ['sass/assets/'],
