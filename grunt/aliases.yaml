@@ -1,0 +1,25 @@
+dev:
+  - 'import_contents'
+  - 'copy:build'
+  - 'handlebars_html:dev'
+  - 'newer:imagemin:dev'
+  - 'newer:responsive_images'
+  - 'sass:dev'
+  - 'autoprefixer:dev'
+  - 'connect:dev'
+  - 'watch'
+build:
+  - 'import_contents'
+  - 'newer:responsive_images'
+  - 'newer:imagemin:build'
+  - 'copy:build'
+  - 'handlebars_html:prod'
+  - 'sass:prod'
+  - 'autoprefixer'
+  - 'csso:prod'
+  - 'requirejs:prod'
+deploy:
+  - 'build'
+  - 'gh-pages'
+default:
+  - 'dev'
