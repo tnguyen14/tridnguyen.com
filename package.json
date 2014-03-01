@@ -10,9 +10,9 @@
     "node": ">= 0.8.0"
   },
   "dependencies": {
-    "handlebars": "~1.0.12",
-    "js-yaml": "~2.1.0",
-    "marked": "~0.2.9",
+    "handlebars": "^2.0.0",
+    "js-yaml": "^3.0.0",
+    "marked": "~0.3.0",
     "moment": "~2.0.0",
     "underscore": "~1.5.1"
   },
@@ -20,19 +20,19 @@
     "grunt": "~0.4.1",
     "grunt-contrib-compass": "~0.3.0",
     "grunt-contrib-connect": "~0.7.0",
-    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-requirejs": "~0.4.1",
-    "grunt-contrib-sass": "~0.4.1",
-    "grunt-contrib-watch": "~0.4.4",
+    "grunt-contrib-sass": "~0.7.0",
+    "grunt-contrib-watch": "~0.5.0",
     "grunt-gh-pages": "~0.6.0",
     "matchdep": "~0.1.2",
-    "grunt-autoprefixer": "~0.3.0",
+    "grunt-autoprefixer": "~0.6.0",
     "grunt-csso": "~0.5.0",
-    "grunt-responsive-images": "0.0.3",
-    "grunt-contrib-imagemin": "~0.3.0",
+    "grunt-responsive-images": "~0.1.0",
+    "grunt-contrib-imagemin": "~0.5.0",
     "grunt-newer": "~0.5.4",
     "time-grunt": "~0.2.5",
-    "load-grunt-tasks": "~0.2.1",
+    "load-grunt-tasks": "~0.4.0",
     "load-grunt-config": "~0.7.1"
   }
 }
