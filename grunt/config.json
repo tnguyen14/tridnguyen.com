@@ -1,0 +1,7 @@
+{
+	"site-name": "Tri Nguyen",
+	"site-url": "http://localhost:4000",
+	"port": 4000,
+	"livereload": 35730,
+	"buildPath": "build/www"
+}

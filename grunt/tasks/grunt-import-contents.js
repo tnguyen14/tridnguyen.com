@@ -43,7 +43,7 @@ module.exports = function (grunt) {
 		});
 
 		// global config
-		var config = grunt.file.readJSON(options.config)
+		var config = grunt.file.readJSON(options.config);
 
 		// Content Tree
 		var contentTree = {};

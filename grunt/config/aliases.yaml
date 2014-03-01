@@ -1,7 +1,9 @@
-dev:
+process:
   - 'import_contents'
   - 'copy:build'
   - 'handlebars_html:dev'
+dev:
+  - 'process'
   - 'newer:imagemin:dev'
   - 'newer:responsive_images'
   - 'sass:dev'
