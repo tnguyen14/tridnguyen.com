@@ -1,15 +1,14 @@
 module.exports = function(grunt){
 	return {
-		options: {
-			base: '<%= buildPath %>'
-		},
 		dev: {
 			options: {
-				port: '<%= port %>'
+				port: '<%= port %>',
+				base: ['<%= buildPath %>', '.']
 			}
 		},
 		prod: {
 			options: {
+				base: '<%= buildPath %>',
 				keepalive: true,
 			}
 		}
