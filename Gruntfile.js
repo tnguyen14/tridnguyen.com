@@ -2,7 +2,7 @@
 
 module.exports = function(grunt) {
 	var path = require('path'),
-		config = grunt.file.readJSON('config-dev.json');
+		config = grunt.file.readJSON('grunt/config.json');
 	// load local tasks
 	grunt.loadTasks('grunt/tasks');
 	// display execution time of grunt tasks

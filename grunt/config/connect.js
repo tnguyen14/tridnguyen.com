@@ -1,21 +1,17 @@
-module.exports = {
-	dev: {
+module.exports = function(grunt){
+	return {
 		options: {
-			port: '<%= port %>',
-			middleware: function(connect, options) {
-				return [
-					// serve files in /dist as if they were in the root.
-					connect.static(__dirname + '/build/www'),
-					// but serve everything else from the root
-					connect.static(__dirname)
-				];
+			base: '<%= buildPath %>'
+		},
+		dev: {
+			options: {
+				port: '<%= port %>'
 			}
-		}
-	},
-	prod: {
-		options: {
-			base: '<%= buildPath %>',
-			keepalive: true,
+		},
+		prod: {
+			options: {
+				keepalive: true,
+			}
 		}
 	}
 }
