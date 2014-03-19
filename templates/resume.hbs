@@ -3,8 +3,6 @@
 		{{> nav}}
 	</div><!-- .main-header -->
 	<div class="resume">
-		<h1 class="page-title">Resume</h1>
-		<div class="intro">{{content.intro}}</div>
 		<div class="networks">
 			<div class="twitter link">
 				<a href="https://twitter.com/{{content.twitter}}"><i class="icon-twitter"></i></a>
@@ -15,7 +13,12 @@
 			<div class="linkedin link">
 				<a href="http://linkedin.com/in/{{content.linkedin}}"><i class="icon-linkedin"></i></a>
 			</div>
+			<div class="print link">
+				<a href="{{content.print}}"><i class="icon-print"></i></a>
+			</div>
 		</div>
+		<h1 class="page-title">Resume</h1>
+		<div class="intro">{{content.intro}}</div>
 		{{#if work}}
 			<div class="work section">
 				<h2 class="section-title">Work Experience</h2>
