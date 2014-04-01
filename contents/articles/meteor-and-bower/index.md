@@ -13,7 +13,7 @@ After some digging around on StackOverflow and jumping on the IRC channel, I fig
 
 ### Where to put `bower_components`?
 
-This was the first question I had to answer. Since Meteor automatically package any `.css` and `.js` files in the `client` folder and serve them, `client` is not a good idea to put these dependencies, as they most likely have a bloated number of files that you don't actually need.
+This was the first question I had to answer. Since Meteor automatically packages any `.css` and `.js` files in the `client` folder and serves them, `client` is not a good idea to put these dependencies, as they most likely have a bloated number of files you don't actually need.
 
 I found `public` to be a good place to keep these files, since "Meteor server will serve any files under the `public` directory".
 
