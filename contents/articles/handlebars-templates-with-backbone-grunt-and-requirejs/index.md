@@ -1,8 +1,9 @@
 
 ---
 title: 'Handlebars templates with Backbone, grunt.js and RequireJS'
-template: 'article.js'
-date: 'Mar 31, 2014'
+author: tri-nguyen
+template: article.hbs
+date: 2014-03-31
 ---
 
 Integrating Handlebars templates in modern web development workflow has been crucial in helping me organize my code neatly and maintain sanity. I want to achieve a few things:
