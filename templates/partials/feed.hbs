@@ -1,15 +1,10 @@
-{{#getPage '1'}}
-	{{#each posts}}
-		<article class="post-single">
-			<h2 class="article-title"><a href="{{url}}">{{title}}</a></h2>
-			<div class="article-date">{{getDate 'MM-DD-YYYY'date}}</div>
-			{{{main}}}
-		</article><!-- .post-single -->
-	{{/each}}
+{{#each posts}}
+	<article class="post-single">
+		<h2 class="article-title"><a href="{{url}}">{{title}}</a></h2>
+		<div class="article-date">{{getDate 'MM-DD-YYYY'date}}</div>
+		{{{main}}}
+	</article><!-- .post-single -->
+{{/each}}
 
-	<div class="nav-link">
-		<a class="prev" href="{{prevUrl}}"><i class="icon-arrow-left"></i> Read more</a>
-	</div>
-{{/getPage}}
 
 

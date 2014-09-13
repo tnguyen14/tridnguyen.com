@@ -1,7 +1,12 @@
 {{> header}}
 	<section class="main-content">
 		{{#with archives/articles}}
-			{{> feed}}
+			{{#getPage '1'}}
+				{{> feed}}
+				<div class="nav-link">
+					<a class="prev" href="{{prevUrl}}"><i class="icon-arrow-left"></i> Read more</a>
+				</div>
+			{{/getPage}}
 		{{/with}}
 	</section><!-- .main-content -->
 {{> footer}}
