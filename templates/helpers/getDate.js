@@ -8,8 +8,11 @@ var  moment = require('moment'),
 
 module.exports = function(formatStr, date) {
 	var momentDate;
+	if (!date) {
+		throw new Error('Invalid date param.');
+	}
 	// A rather hacky way to test if the second argument is empty
-	if (_.isEmpty(date.data)) {
+	if ((date.data && _.isEmpty(date.data))) {
 		momentDate = moment();
 	} else {
 		// if the date passed in is not a moment type, convert it to moment
@@ -18,7 +21,7 @@ module.exports = function(formatStr, date) {
 			momentDate = moment(date);
 			// if the date parsing fails
 			if (!momentDate.isValid()) {
-				return 'The date passed in is invalid';
+				throw new Error('The date passed in is invalid');
 			}
 		} else {
 			momentDate = date;
