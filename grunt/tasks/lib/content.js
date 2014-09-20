@@ -25,8 +25,7 @@ exports.init = function (grunt) {
 	// @param {Object}
 	// @return {Array}
 	var objToArray = function(obj) {
-		var array = [];
-		_(obj).forEach(function(value, key) {
+		return _(obj).map(function(value, key) {
 			var el = {};
 			// if we're not at the post level yet, go deeper
 			if (!value.hasOwnProperty('template')) {
@@ -36,9 +35,8 @@ exports.init = function (grunt) {
 			} else {
 				el[key] = value;
 			}
-			array.push(el);
+			return el;
 		});
-		return array;
 	};
 
 	// sort array by keys
