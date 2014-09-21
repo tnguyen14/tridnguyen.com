@@ -1,6 +1,6 @@
 
 ---
-title: 'Use aliasify to include configurations into your web application'
+title: 'Use aliasify to include configurations in your web application'
 author: tri-nguyen
 template: article.hbs
 date: 2014-09-20
@@ -88,7 +88,7 @@ gulp.task('scripts', function () {
 ```
 In this approach, aliasify will automatically use `config.dev.json` for development environment and `config.json` for production one.
 
-A similar approach could be taken when using [`grunt-browserify`](https://github.com/jmreidy/grunt-browserify). In fact, it is probably easier to do environment-specific stuff with grunt due to its ability to declare a task target.
+A similar approach could be taken when using [grunt-browserify](https://github.com/jmreidy/grunt-browserify). In fact, it is probably easier to do environment-specific stuff with grunt due to its ability to declare a task target.
 
 There you have it, a simple approach to accessing environment configuations in your project that is made possible by browserify.
 
