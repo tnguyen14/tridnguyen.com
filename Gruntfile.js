@@ -2,14 +2,12 @@
 
 module.exports = function(grunt) {
 	var path = require('path'),
-		config = grunt.file.readJSON('grunt/config.json');
-	// load local tasks
-	grunt.loadTasks('grunt/tasks');
+		config = grunt.file.readJSON('./tobiko.json');
 	// display execution time of grunt tasks
 	require('time-grunt')(grunt);
 	// load all grunt configs
 	require('load-grunt-config')(grunt, {
-		configPath: path.join(process.cwd(), 'grunt/config'),
+		configPath: path.join(process.cwd(), 'tobiko'),
 		config: config
 	});
 	grunt.config.set('gh-pages', {
