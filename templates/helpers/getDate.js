@@ -11,8 +11,7 @@ module.exports = function(formatStr, date) {
 	if (!date) {
 		throw new Error('Invalid date param.');
 	}
-	// A rather hacky way to test if the second argument is empty
-	if ((date.data && _.isEmpty(date.data))) {
+	if ((date && date.data)) {
 		momentDate = moment();
 	} else {
 		// if the date passed in is not a moment type, convert it to moment
