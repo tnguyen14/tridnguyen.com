@@ -8,5 +8,5 @@ module.exports = {
 		dest: '<%= buildPath %>',
 		data: 'build/data.json',
 	},
-	prod: '<%= handlebars_html.dev %>'
+	prod: '<%= generate_html.dev %>'
 }
