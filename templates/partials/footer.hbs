@@ -1,7 +1,7 @@
 		<footer class="main-footer">
 			Built by Tri Nguyen using <a href="https://github.com/tnguyen14/tobiko">tobiko</a>. Copyrights ® {{getDate 'YYYY'}}.
 		</footer>
-
+		<script type="text/javascript" src="/js/lib/prism.js"></script>
 		{{#isEqual content.env 'dev'}}
 			<script type="text/javascript" data-main="/js/config.js" src="/components/requirejs/require.js"></script>
 			<script src="http://localhost:{{config.livereload}}/livereload.js"></script>

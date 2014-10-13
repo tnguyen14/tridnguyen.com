@@ -1,15 +1,13 @@
 define(function (require) {
 
 	var config = require('json!config.json'),
-		$ = require('jquery'),
-		Prism = require('prism');
+		$ = require('jquery');
 
 	require('validation');
 	require('bxslider');
 	require('fancybox');
 
 	$(document).ready(function(){
-		Prism.highlightAll();
 		$("#contact input[type='submit']").on('click', function (e) {
 			e.preventDefault();
 			var $form = $('#contact');
