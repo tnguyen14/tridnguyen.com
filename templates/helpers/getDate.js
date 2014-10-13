@@ -3,8 +3,7 @@
 // @param {String|Object} a date string (http://momentjs.com/docs/#/parsing/string/) or momentjs date object
 // @return {String} the date string in the desired format
 
-var  moment = require('moment'),
-	_ = require('underscore');
+var  moment = require('moment');
 
 module.exports = function(formatStr, date) {
 	var momentDate;
