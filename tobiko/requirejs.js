@@ -5,7 +5,7 @@ module.exports = {
 			mainConfigFile: 'js/config.js',
 			name: 'components/almond/almond',
 			insertRequire: ['js/app'],
-			out: '<%= buildPath %>/app.js',
+			out: '<%= buildPath %>/js/app.js',
 			optimize: 'uglify2',
 			generateSourceMaps: true,
 			preserveLicenseComments: false,
