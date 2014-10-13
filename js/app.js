@@ -10,7 +10,8 @@ define(function (require) {
 
 	$(document).ready(function(){
 		Prism.highlightAll();
-		$("#contact input[type='submit']").click(function(){
+		$("#contact input[type='submit']").on('click', function (e) {
+			e.preventDefault();
 			var $form = $('#contact');
 			$form.validate({
 				rules: {
@@ -21,8 +22,10 @@ define(function (require) {
 						email: true
 					}
 				}
-			})
+			});
 			if ($form.valid()) {
+				// disable button to prevent double click
+				$(e.target).prop('disabled', true);
 				$.ajax({
 					url: 'http://inspired-forms.herokuapp.com/forms/52e49f41dd1cae0200000002',
 					data: $form.serialize(),
@@ -33,12 +36,12 @@ define(function (require) {
 					},
 					error: function(error) {
 						if (error) {
+							$(e.target).prop('disabled', false);
 							console.log(error);
 						}
 					}
 				});
 			}
-			return false;
 		});
 
 		// works
