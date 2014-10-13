@@ -3,6 +3,7 @@ module.exports = {
 		baseDir: 'contents',
 		config : 'config.json',
 		markdown: {
+			gfm: true,
 			breaks: true,
 			smartLists: true,
 			smartypants: true,
