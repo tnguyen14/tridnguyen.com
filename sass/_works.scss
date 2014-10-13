@@ -16,7 +16,7 @@
 	}
 }
 .work-viewer {
-	@include clearfix;
+	@extend %clearfix;
 	background-color: $light-gray;
 	padding: 1em 3%;
 	visibility: hidden;
@@ -31,7 +31,7 @@
 		a {
 			display: block;
 			text-align: center;
-			@include clearfix;
+			@extend %clearfix;
 		}
 		img {
 			height: auto;
@@ -83,7 +83,7 @@
 }
 
 .work-singles {
-	@include clearfix;
+	@extend %clearfix;
 
 	.work-single {
 		border: 5px solid transparent;
