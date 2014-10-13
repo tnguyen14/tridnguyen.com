@@ -57,6 +57,14 @@ $light-gray: #f2f2f2;
 	}
 }
 
+%clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
 .visuallyhidden {
 	border: 0;
 	clip: rect(0 0 0 0);

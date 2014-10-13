@@ -1,7 +1,7 @@
 .about-page {
 	border-bottom: 1px solid $gray;
 	padding-bottom: 1em;
-	@include clearfix;
+	@extend %clearfix;
 	p {
 		&:first-of-type {
 			margin-top: 0;

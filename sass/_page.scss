@@ -38,7 +38,7 @@
 
 // bottom navigation links
 .nav-link {
-	@include clearfix;
+	@extend %clearfix;
 	font-size: 1.2em;
 	margin: 1em 0;
 	a {

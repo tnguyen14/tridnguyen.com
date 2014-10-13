@@ -1,9 +1,9 @@
 .main-header {
-	@include clearfix;
+	@extend %clearfix;
 }
 
 .main-nav {
-	@include clearfix;
+	@extend %clearfix;
 	@include at-least ( 40em ) {
 		float: left;
 		width: 100%;
@@ -13,7 +13,7 @@
 		width: 55%;
 	}
 	.main-menu {
-		@include clearfix;
+		@extend %clearfix;
 		margin: 0;
 		padding-left: 0;
 	}
