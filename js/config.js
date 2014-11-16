@@ -6,6 +6,7 @@ require.config({
 		text: 'components/requirejs-plugins/lib/text',
 		json: 'components/requirejs-plugins/src/json',
 		handlebars: 'components/handlebars/handlebars',
+		hbs: 'components/require-handlebars-plugin/hbs',
 		jquery: 'components/jquery/jquery.min',
 		prism: 'js/lib/prism',
 		validation: 'components/jquery.validation/jquery.validate',
@@ -33,6 +34,10 @@ require.config({
 		fancybox: {
 			deps: ['jquery']
 		}
+	},
+
+	hbs: {
+		partialsUrl: 'templates/partials'
 	},
 
 	// Remove these modules from the final build
