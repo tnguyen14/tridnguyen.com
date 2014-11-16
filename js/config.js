@@ -7,6 +7,7 @@ require.config({
 		json: 'components/requirejs-plugins/src/json',
 		handlebars: 'components/handlebars/handlebars',
 		hbs: 'components/require-handlebars-plugin/hbs',
+		moment: 'components/moment/moment',
 		jquery: 'components/jquery/jquery.min',
 		prism: 'js/lib/prism',
 		validation: 'components/jquery.validation/jquery.validate',
