@@ -1,8 +1,8 @@
 {{#each posts}}
 	<article class="post-single">
 		<h2 class="article-title"><a href="{{url}}">{{title}}</a></h2>
-		<div class="article-date">{{getDate 'MM-DD-YYYY'date}}</div>
-		{{{main}}}
+		<div class="article-date">{{getDate 'MM-DD-YYYY' date}}</div>
+		{{{content}}}
 	</article><!-- .post-single -->
 {{/each}}
 
