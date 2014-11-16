@@ -7,7 +7,15 @@ define(function (require) {
 	require('bxslider');
 	require('fancybox');
 
-	$(document).ready(function(){
+	var articleTemplate = require('hbs!templates/partials/article'),
+		feedTemplate = require('hbs!templates/partials/feed');
+
+	$(document).ready(function () {
+		$.ajax('http://tringuyen.dev/wp-json/posts', {
+			success: function (data) {
+				$('.main-content').append(feedTemplate({posts: data}));
+			}
+		});
 		$("#contact input[type='submit']").on('click', function (e) {
 			e.preventDefault();
 			var $form = $('#contact');
