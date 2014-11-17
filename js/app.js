@@ -1,7 +1,9 @@
 define(function (require) {
 
 	var config = require('json!config.json'),
-		$ = require('jquery');
+		configDev = require('json!config-dev.json'),
+		$ = require('jquery'),
+		_ = require('lodash');
 
 	require('validation');
 	require('bxslider');
@@ -10,6 +12,10 @@ define(function (require) {
 	var articleTemplate = require('hbs!templates/partials/article'),
 		feedTemplate = require('hbs!templates/partials/feed'),
 		loader = require('hbs!templates/partials/loader');
+
+	if (page.env === 'dev') {
+		_.extend(config, configDev);
+	}
 
 	function getParameterByName(name) {
 		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
