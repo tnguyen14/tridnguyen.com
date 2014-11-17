@@ -22,6 +22,7 @@
     "font-awesome": "~3.2.1",
     "jquery.validation": "~1.11.1",
     "bxslider": "*",
-    "fancybox": "~2.1.5"
+    "fancybox": "~2.1.5",
+    "lodash": "~2.4.1"
   }
 }
