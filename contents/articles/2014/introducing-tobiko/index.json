@@ -1,0 +1,6 @@
+{
+	"template": "index.hbs",
+	"filepath": "articles/introducing-tobiko/index.json",
+	"slug": "introducing-tobiko",
+	"context": "post"
+}

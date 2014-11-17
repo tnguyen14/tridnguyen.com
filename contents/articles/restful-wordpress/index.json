@@ -1,0 +1,5 @@
+{
+	"template": "index.hbs",
+	"slug": "restful-wordpress",
+	"context": "post"
+}
