@@ -17,7 +17,6 @@
 		root.returnExports = factory(root.moment);
 	}
 }(this, function (Handlebars, moment) {
-	console.log(arguments);
 	function getDate (formatStr, date) {
 		var momentDate;
 		if (!date) {
@@ -26,7 +25,6 @@
 		if ((date && date.data)) {
 			momentDate = moment();
 		} else {
-			console.log(moment);
 			// if the date passed in is not a moment type, convert it to moment
 			// otherwise use it
 			if (!moment.isMoment(date)) {
