@@ -4,7 +4,17 @@
 		<div class="article-date">{{getDate 'MM-DD-YYYY' date}}</div>
 		{{{content}}}
 	</article><!-- .post-single -->
+{{else}}
+	<p>No articles available.</p>
 {{/each}}
 
+<div class="nav-link">
+	{{#if prevPage}}
+		<a class="prev" href="?page={{prevPage}}"><i class="icon-arrow-left"></i> Previous</a>
+	{{/if}}
+	{{#if nextPage}}
+		<a class="next" href="?page={{nextPage}}">Next <i class="icon-arrow-right"></i></a>
+	{{/if}}
+</div>
 
 
