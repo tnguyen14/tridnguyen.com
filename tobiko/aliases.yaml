@@ -8,7 +8,6 @@ dev:
   - 'newer:responsive_images'
   - 'sass:dev'
   - 'autoprefixer:dev'
-  - 'requirejs'
   - 'connect:dev'
   - 'watch'
 build:
