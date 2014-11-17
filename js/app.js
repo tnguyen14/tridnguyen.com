@@ -11,11 +11,21 @@ define(function (require) {
 		feedTemplate = require('hbs!templates/partials/feed');
 
 	$(document).ready(function () {
-		$.ajax('http://tringuyen.dev/wp-json/posts', {
-			success: function (data) {
-				$('.main-content').append(feedTemplate({posts: data}));
-			}
-		});
+		switch (page.context) {
+			case 'main':
+				$.ajax('http://tringuyen.dev/wp-json/posts', {
+					success: function (data) {
+						$('.main-content').append(feedTemplate({posts: data}));
+					}
+				});
+				break;
+			case 'post':
+				$.ajax('http://tringuyen.dev/wp-json/posts?filter[name]=' + page.slug, {
+					success: function (data) {
+						$('.main-content').append(articleTemplate(data[0]));
+					}
+				});
+		}
 		$("#contact input[type='submit']").on('click', function (e) {
 			e.preventDefault();
 			var $form = $('#contact');
