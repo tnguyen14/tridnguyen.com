@@ -1,6 +1,6 @@
 {
 	"site-name": "Tri Nguyen",
 	"site-url": "http://tridnguyen.com",
-	"api-url": "http://wp.tridnguyen.com/wp-json",
+	"apiRoot": "http://wp.tridnguyen.com/wp-json",
 	"tagline": "I make websites and web applications. Simple and minimal interfaces make me happy."
 }
