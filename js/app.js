@@ -31,7 +31,7 @@ define(function (require) {
 	var getPosts = function () {
 		var $mainContent = $('.main-content');
 		$mainContent.html(loader);
-		$.ajax('http://tringuyen.dev/wp-json/posts', {
+		$.ajax(config.apiRoot + '/posts', {
 			data: {
 				filter: {
 					posts_per_page: getParameterByName('posts_per_page') || 5
@@ -52,7 +52,7 @@ define(function (require) {
 		if (!slug) { return; }
 		var $mainContent = $('.main-content');
 		$mainContent.html(loader);
-		$.ajax('http://tringuyen.dev/wp-json/posts', {
+		$.ajax(config.apiRoot + '/posts', {
 			data: {
 				filter: {
 					name: slug
