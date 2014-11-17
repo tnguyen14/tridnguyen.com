@@ -8,7 +8,8 @@ define(function (require) {
 	require('fancybox');
 
 	var articleTemplate = require('hbs!templates/partials/article'),
-		feedTemplate = require('hbs!templates/partials/feed');
+		feedTemplate = require('hbs!templates/partials/feed'),
+		loader = require('hbs!templates/partials/loader');
 
 	function getParameterByName(name) {
 		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -22,6 +23,8 @@ define(function (require) {
 	// get all the posts for the current page
 	// baed on posts_per_page
 	var getPosts = function () {
+		var $mainContent = $('.main-content');
+		$mainContent.html(loader);
 		$.ajax('http://tringuyen.dev/wp-json/posts', {
 			data: {
 				filter: {
@@ -30,7 +33,7 @@ define(function (require) {
 				page: currentPage
 			},
 			success: function (data) {
-				$('.main-content').append(feedTemplate({
+				$mainContent.empty().html(feedTemplate({
 					posts: data,
 					prevPage: (data.length === 0) ? undefined : currentPage + 1, // if receive no more posts, do not go back any further
 					nextPage: (currentPage === 1) ? undefined : currentPage - 1
@@ -41,6 +44,8 @@ define(function (require) {
 
 	var getPost = function (slug) {
 		if (!slug) { return; }
+		var $mainContent = $('.main-content');
+		$mainContent.html(loader);
 		$.ajax('http://tringuyen.dev/wp-json/posts', {
 			data: {
 				filter: {
@@ -48,7 +53,7 @@ define(function (require) {
 				}
 			},
 			success: function (data) {
-				$('.main-content').append(articleTemplate(data[0]));
+				$mainContent.empty().html(articleTemplate(data[0]));
 			}
 		});
 	}
