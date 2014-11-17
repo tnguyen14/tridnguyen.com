@@ -10,21 +10,57 @@ define(function (require) {
 	var articleTemplate = require('hbs!templates/partials/article'),
 		feedTemplate = require('hbs!templates/partials/feed');
 
+	function getParameterByName(name) {
+		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+		var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+			results = regex.exec(location.search);
+		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	}
+
+	var currentPage = +getParameterByName('page') || 1;
+
+	// get all the posts for the current page
+	// baed on posts_per_page
+	var getPosts = function () {
+		$.ajax('http://tringuyen.dev/wp-json/posts', {
+			data: {
+				filter: {
+					posts_per_page: getParameterByName('posts_per_page') || 5
+				},
+				page: currentPage
+			},
+			success: function (data) {
+				$('.main-content').append(feedTemplate({
+					posts: data,
+					prevPage: (data.length === 0) ? undefined : currentPage + 1, // if receive no more posts, do not go back any further
+					nextPage: (currentPage === 1) ? undefined : currentPage - 1
+				}));
+			}
+		});
+	}
+
+	var getPost = function (slug) {
+		if (!slug) { return; }
+		$.ajax('http://tringuyen.dev/wp-json/posts', {
+			data: {
+				filter: {
+					name: slug
+				}
+			},
+			success: function (data) {
+				$('.main-content').append(articleTemplate(data[0]));
+			}
+		});
+	}
+
 	$(document).ready(function () {
 		switch (page.context) {
 			case 'main':
-				$.ajax('http://tringuyen.dev/wp-json/posts', {
-					success: function (data) {
-						$('.main-content').append(feedTemplate({posts: data}));
-					}
-				});
+				getPosts();
 				break;
 			case 'post':
-				$.ajax('http://tringuyen.dev/wp-json/posts?filter[name]=' + page.slug, {
-					success: function (data) {
-						$('.main-content').append(articleTemplate(data[0]));
-					}
-				});
+				getPost(page.slug);
+				break;
 		}
 		$("#contact input[type='submit']").on('click', function (e) {
 			e.preventDefault();
