@@ -1,0 +1,6 @@
+{
+	"template": "index.hbs",
+	"filepath": "articles/aliasify-config/index.md",
+	"slug": "aliasify-config",
+	"context": "post"
+}

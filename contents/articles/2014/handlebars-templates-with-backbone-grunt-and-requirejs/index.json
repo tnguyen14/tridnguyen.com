@@ -1,0 +1,6 @@
+{
+	"template": "index.hbs",
+	"filepath": "articles/handlebars-templates-with-backbone-grunt-and-requirejs/index.json",
+	"slug": "handlebars-templates-with-backbone-grunt-and-requirejs",
+	"context": "post"
+}
