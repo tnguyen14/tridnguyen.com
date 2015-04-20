@@ -1,13 +1,13 @@
 {
-  "name": "cbtallc2",
-  "version": "0.0.2",
+  "name": "tridnguyen.com",
+  "version": "1.0.0",
   "author": "Tri Nguyen",
   "repository": {
     "type": "git",
-    "url": "git://github.com/tnguyen14/cbtallc"
+    "url": "git://github.com/tnguyen14/tridnguyen.com"
   },
   "engines": {
-    "node": ">= 0.8.0"
+    "node": ">= 0.12.0"
   },
   "dependencies": {
     "handlebars": "^3.0.2",
