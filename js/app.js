@@ -44,6 +44,7 @@ define(function (require) {
 					prevPage: (data.length === 0) ? undefined : currentPage + 1, // if receive no more posts, do not go back any further
 					nextPage: (currentPage === 1) ? undefined : currentPage - 1
 				}));
+				Prism.highlightAll();
 			}
 		});
 	}
@@ -60,6 +61,7 @@ define(function (require) {
 			},
 			success: function (data) {
 				$mainContent.empty().html(articleTemplate(data[0]));
+				Prism.highlightAll();
 			}
 		});
 	}
@@ -135,7 +137,6 @@ define(function (require) {
 		});
 		$('.closeicon').click(function() {
 			$viewers.removeClass('active').addClass('visuallyhidden');
-
-		})
+		});
 	});
 });
