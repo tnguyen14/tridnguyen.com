@@ -6,7 +6,7 @@ dev:
   - 'clean:build'
   - 'process'
   - 'newer:imagemin:dev'
-  - 'newer:responsive_images'
+  - 'responsive_images'
   - 'sass:dev'
   - 'autoprefixer:dev'
   - 'connect:dev'
