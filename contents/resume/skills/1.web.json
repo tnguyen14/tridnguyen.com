@@ -2,18 +2,16 @@
 	"title": "Web Development",
 	"skills": [
 		"JavaScript",
-		"HTML5",
-		"CSS3",
+		"HTML",
+		"CSS",
+		"Sass",
+		"node",
+		"automation (vagrant & docker)",
+		"build tools (Grunt & gulp)",
+		"JS frameworks (backbone, meteor, ampersand)",
+		"git",
+		"SVG",
 		"PHP",
-		"CSS Preprocessor (SASS & LESS)",
-		"node.js",
-		"WordPress",
-		"jQuery",
-		"gulp",
-		"Grunt.js",
-		"AmpersandJS",
-		"Meteor.js",
-		"Version Control (Git & GitHub)",
-		"Photoshop"
+		"WordPress"
 	]
 }
