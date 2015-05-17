@@ -1,19 +1,19 @@
 {{#each posts}}
 	<article class="post-single">
-		<h2 class="article-title"><a href="articles/{{slug}}">{{title}}</a></h2>
+		<h2 class="article-title"><a href="/articles/{{slug}}">{{title}}</a></h2>
 		<div class="article-date">{{getDate 'MM-DD-YYYY' date}}</div>
-		{{{content}}}
+		{{{main}}}
 	</article><!-- .post-single -->
 {{else}}
 	<p>No articles available.</p>
 {{/each}}
 
 <div class="nav-link">
-	{{#if prevPage}}
-		<a class="prev" href="?page={{prevPage}}"><i class="icon-arrow-left"></i> Previous</a>
+	{{#if prevUrl}}
+		<a class="prev" href="{{prevUrl}}"><i class="icon-arrow-left"></i> Previous</a>
 	{{/if}}
-	{{#if nextPage}}
-		<a class="next" href="?page={{nextPage}}">Next <i class="icon-arrow-right"></i></a>
+	{{#if nextUrl}}
+		<a class="next" href="{{nextUrl}}">Next <i class="icon-arrow-right"></i></a>
 	{{/if}}
 </div>
 
