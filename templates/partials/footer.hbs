@@ -3,7 +3,7 @@
 		</footer>
 		<script type="text/javascript" src="/js/lib/prism.js"></script>
 		<script type="text/javascript">
-			var page = {{{json content}}};
+			var page.env = {{{json content.env}}};
 		</script>
 		{{#isEqual content.env 'dev'}}
 			<script type="text/javascript" data-main="/js/config.js" src="/components/requirejs/require.js"></script>
