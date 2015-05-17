@@ -30,7 +30,7 @@
     "grunt-gh-pages": "^0.10.0",
     "grunt-newer": "^1.1.0",
     "grunt-responsive-images": "~0.1.0",
-    "grunt-tobiko": "^3.0.4",
+    "grunt-tobiko": "^4.4.0",
     "load-grunt-config": "^0.17.1",
     "load-grunt-tasks": "^3.1.0",
     "matchdep": "^0.3.0",
