@@ -1,7 +1,7 @@
 module.exports = {
-	options : {
+	options: {
 		baseDir: 'contents',
-		config : 'config.json',
+		config: 'config.json',
 		markdown: {
 			gfm: true,
 			breaks: true,
