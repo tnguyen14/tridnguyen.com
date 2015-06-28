@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 	var path = require('path'),
 		config = grunt.file.readJSON('./tobiko.json');
 	// display execution time of grunt tasks
@@ -20,4 +20,4 @@ module.exports = function(grunt) {
 			src: ['**/*']
 		}
 	});
-}
+};

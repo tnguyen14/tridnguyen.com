@@ -11,7 +11,7 @@ function step (steps, options) {
 			if (steps === 1) {
 				return options.fn(this[key]);
 			} else {
-				step(steps-1);
+				step(steps - 1);
 			}
 		}
 	}
