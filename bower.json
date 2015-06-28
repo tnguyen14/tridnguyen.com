@@ -1,28 +1,12 @@
 {
-  "name": "Tri Nguyen",
-  "version": "0.0.1",
-  "devDependencies": {
-    "requirejs": "~2.1.6",
-    "requirejs-plugins": "~1.0.2",
-    "almond": "~0.2.5",
-    "marked": "~0.2.9",
-    "handlebars": "~1.0.0",
-    "require-handlebars-plugin": "~0.10.0"
-  },
+  "name": "tridnguyen.com",
+  "version": "1.1.0",
+  "author": "Tri Nguyen",
   "dependencies": {
-    "moment": "~2.8.3",
-    "requirejs": "~2.1.6",
-    "requirejs-plugins": "~1.0.2",
-    "almond": "~0.2.5",
-    "marked": "~0.2.9",
-    "handlebars": "~1.0.0",
-    "normalize.scss": "~2.1.2",
-    "normalize-scss": "~2.1.2",
-    "jquery": "~2.0.3",
+    "jquery": "~2.1.4",
     "font-awesome": "~3.2.1",
-    "jquery.validation": "~1.11.1",
+    "jquery.validation": "~1.13.1",
     "bxslider": "*",
-    "fancybox": "~2.1.5",
-    "lodash": "~2.4.1"
+    "fancybox": "~2.1.5"
   }
 }
