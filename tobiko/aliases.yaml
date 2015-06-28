@@ -9,6 +9,7 @@ dev:
   - 'responsive_images'
   - 'sass:dev'
   - 'autoprefixer:dev'
+  - 'browserify:devWatch'
   - 'connect:dev'
   - 'watch'
 build:
@@ -21,7 +22,7 @@ build:
   - 'sass:prod'
   - 'autoprefixer'
   - 'csso:prod'
-  - 'requirejs:prod'
+  - 'browserify:dev'
 deploy:
   - 'build'
   - 'gh-pages'
