@@ -1,0 +1,14 @@
+{
+	"camelcase": true,
+	"curly": true,
+	"eqeqeq": true,
+	"undef": true,
+	"unused": true,
+	"browser": true,
+	"strict": true,
+	"browserify": true,
+	"node": true,
+	"globals": {
+
+	}
+}

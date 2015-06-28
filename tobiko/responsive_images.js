@@ -13,4 +13,4 @@ module.exports = {
 			{expand: true, cwd: 'contents', src: '**/*.{jpg,png}', dest: '<%= buildPath %>'}
 		]
 	}
-}
+};

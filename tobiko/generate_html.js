@@ -9,4 +9,4 @@ module.exports = {
 		data: 'build/data.json',
 	},
 	prod: '<%= generate_html.dev %>'
-}
+};

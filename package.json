@@ -10,6 +10,9 @@
     "node": ">= 0.12.0"
   },
   "main": "./js/app.js",
+  "scripts": {
+    "lint": "jshint . --reporter node_modules/jshint-stylish/index.js"
+  },
   "dependencies": {
     "handlebars": "^3.0.2",
     "js-yaml": "^3.2.2",
@@ -35,6 +38,8 @@
     "grunt-newer": "^1.1.0",
     "grunt-responsive-images": "~0.1.0",
     "grunt-tobiko": "^4.4.0",
+    "jshint": "^2.8.0",
+    "jshint-stylish": "^2.0.1",
     "load-grunt-config": "^0.17.1",
     "load-grunt-tasks": "^3.1.0",
     "matchdep": "^0.3.0",
