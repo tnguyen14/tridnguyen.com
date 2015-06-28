@@ -37,7 +37,7 @@ $(document).ready(function () {
 				success: function () {
 					$form.html('<p>Thank you! Your message has been received. I will be in touch shortly.</p>');
 				},
-				error: function(error) {
+				error: function (error) {
 					if (error) {
 						$(e.target).prop('disabled', false);
 					}
@@ -47,7 +47,7 @@ $(document).ready(function () {
 	});
 
 	// works
-	$('.feature-images').each(function(){
+	$('.feature-images').each(function () {
 		$(this).bxSlider({
 			'prevText': '',
 			'nextText': ''
@@ -56,13 +56,13 @@ $(document).ready(function () {
 
 	$('.fancybox').fancybox();
 
-	$('.work-viewer').each(function() {
+	$('.work-viewer').each(function () {
 		$(this).addClass('visuallyhidden');
 	});
 
 	var $viewers = $('.work-viewer');
 
-	$('.work-single').click(function() {
+	$('.work-single').click(function () {
 		var slug = $(this).data('work'),
 			$viewer = $('#' + slug);
 
@@ -72,7 +72,7 @@ $(document).ready(function () {
 		$viewers.not('#' + slug).removeClass('active').addClass('visuallyhidden');
 		$viewer.toggleClass('active').toggleClass('visuallyhidden');
 	});
-	$('.closeicon').click(function() {
+	$('.closeicon').click(function () {
 		$viewers.removeClass('active').addClass('visuallyhidden');
 	});
 });

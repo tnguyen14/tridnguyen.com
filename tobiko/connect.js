@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(){
+module.exports = function () {
 	return {
 		dev: {
 			options: {
@@ -11,7 +11,7 @@ module.exports = function(){
 		prod: {
 			options: {
 				base: '<%= buildPath %>',
-				keepalive: true,
+				keepalive: true
 			}
 		}
 	};
