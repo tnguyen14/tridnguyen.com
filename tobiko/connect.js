@@ -1,4 +1,6 @@
-module.exports = function(grunt){
+'use strict';
+
+module.exports = function () {
 	return {
 		dev: {
 			options: {
@@ -9,8 +11,8 @@ module.exports = function(grunt){
 		prod: {
 			options: {
 				base: '<%= buildPath %>',
-				keepalive: true,
+				keepalive: true
 			}
 		}
-	}
-}
+	};
+};
