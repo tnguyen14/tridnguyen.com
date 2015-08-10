@@ -1,7 +1,5 @@
 'use strict';
 
-var Handlebars = require('handlebars');
-
 function isEqual (a, b, options) {
 	/* jshint validthis:true */
 	if (a === b) {
@@ -10,5 +8,4 @@ function isEqual (a, b, options) {
 		return options.inverse(this);
 	}
 }
-Handlebars.registerHelper('isEqual', isEqual);
-
+module.exports = isEqual;

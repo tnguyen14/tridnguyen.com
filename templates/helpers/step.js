@@ -1,9 +1,7 @@
 'use strict';
 
-var Handlebars = require('handlebars');
-
 // step into an object
-// @param steps equals the number of levels to go depeer in the object
+// @param steps the number of levels to go depeer in the object
 function step (steps, options) {
 	/* jshint validthis:true */
 	for (var key in this) {
@@ -16,4 +14,6 @@ function step (steps, options) {
 		}
 	}
 }
-Handlebars.registerHelper('step', step);
+// Handlebars.registerHelper('step', step);
+
+module.exports = step;
