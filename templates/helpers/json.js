@@ -1,7 +1,5 @@
 'use strict';
 
-var Handlebars = require('handlebars');
-
 /**
  * @description convert object into JSON string
  * @param object to be stringified
@@ -10,4 +8,4 @@ var Handlebars = require('handlebars');
 function json (object) {
 	return JSON.stringify(object);
 }
-Handlebars.registerHelper('json', json);
+module.exports = json;

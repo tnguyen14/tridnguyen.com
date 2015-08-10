@@ -1,6 +1,5 @@
 'use strict';
 
-var Handlebars = require('handlebars');
 var moment = require('moment');
 
 // Display date
@@ -30,4 +29,4 @@ function getDate (formatStr, date) {
 
 	return momentDate.format(formatStr);
 }
-Handlebars.registerHelper('getDate', getDate);
+module.exports = getDate;
