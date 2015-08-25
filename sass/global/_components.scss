@@ -1,0 +1,11 @@
+.social-networks {
+	@extend %clearfix;
+	.link {
+		float: left;
+		margin-right: 1rem;
+	}
+	a {
+		font-size: 1.5rem;
+		text-decoration: none;
+	}
+}

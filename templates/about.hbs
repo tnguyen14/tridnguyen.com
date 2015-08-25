@@ -7,9 +7,11 @@
 	<div class="about-page">
 		<img class="feature" src="{{content.feature}}"/>
 		{{{content.main}}}
-
-		<a class="about-link" href="/resume">Resume</a>
-		<a class="about-link" href="/academics">Academics</a>
+		<div class="about-links">
+			<a href="/resume">Resume</a>
+			<a href="/academics">Academics</a>
+		</div>
+		{{> social-networks}}
 	</div><!-- .about -->
 
 	<div class="works">

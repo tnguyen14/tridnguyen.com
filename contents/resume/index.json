@@ -2,8 +2,5 @@
 	"title": "Resume",
 	"template": "resume.hbs",
 	"intro": "I make websites and web applications.",
-	"twitter": "tridnguyen",
-	"github": "tnguyen14",
-	"linkedin": "triduynguyen",
 	"print": "https://docs.google.com/document/d/1l5220fi22NIoHtXDDuVTrW21y6EXJU3Z-zxJl5atuI0"
 }

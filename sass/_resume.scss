@@ -7,16 +7,12 @@
 		font-weight: 700;
 		text-align: center;
 	}
-	.networks {
+	.social-networks {
 		@extend %clearfix;
+		float: right;
 		margin-top: 1em;
 		.link {
 			float: right;
-			margin-right: 1em;
-		}
-		a {
-			font-size: 1.5em;
-			text-decoration: none;
 		}
 	}
 	.item {
