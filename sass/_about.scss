@@ -17,12 +17,14 @@
 			margin: 0 0 1em 2em;
 		}
 	}
-	.about-link {
-		@extend %button;
-		display: block;
-		float: left;
-		margin-top: 1em;
-		margin-right: 1em;
-		text-decoration: none;
+	.about-links {
+		margin-top: 1rem;
+		a {
+			@extend %button;
+			display: block;
+			float: left;
+			margin-right: 1rem;
+			text-decoration: none;
+		}
 	}
 }

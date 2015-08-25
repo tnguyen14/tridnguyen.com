@@ -4,4 +4,11 @@
 	@include at-least( 40em ) {
 		margin-top: 2em;
 	}
+	.social-networks {
+		text-align: center;
+		.link {
+			display: inline-block;
+			float: none;
+		}
+	}
 }
