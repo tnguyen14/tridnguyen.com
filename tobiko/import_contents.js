@@ -10,7 +10,7 @@ module.exports = {
 			langPrefix: 'language-'
 		},
 		wordpress: {
-			apiRoot: 'http://wp.tridnguyen.com/wp-json',
+			apiRoot: 'http://wp.tridnguyen.com/wp-json/wp/v2',
 			contents: [{
 				postType: 'posts',
 				folder: 'articles',
