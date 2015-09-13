@@ -1,4 +1,4 @@
 {
 	"site-url": "http://localhost:4000",
-	"apiRoot": "http://wp.tridnguyen.com/wp-json"
+	"apiRoot": "http://wp.tridnguyen.com/wp-json/wp/v2"
 }
