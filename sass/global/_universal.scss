@@ -28,8 +28,10 @@ img {
 	height: auto;
 }
 
-code {
+code,
+code[class*="language-"] {
 	background-color: $light-gray;
+	font-family: 'Source Code Pro', monospace;
 }
 
 pre {
