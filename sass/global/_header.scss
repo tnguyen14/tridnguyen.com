@@ -54,7 +54,7 @@
 
 .about {
 	position: absolute;
-	bottom: 2em;
+	bottom: 4em;
 	@include at-least( 40em ) {
 		border-bottom: 1px solid $orange;
 		float: right;
