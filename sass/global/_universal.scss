@@ -30,12 +30,13 @@ img {
 
 code,
 code[class*="language-"] {
-	background-color: $light-gray;
+	background-color: $whisper;
 	font-family: 'Source Code Pro', monospace;
+	word-wrap: break-word;
 }
 
 pre {
-	background-color: $light-gray;
+	background-color: $whisper;
 	padding: 0.5em 1em;
 	overflow-x: auto;
 }
