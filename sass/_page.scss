@@ -5,7 +5,16 @@
 
 .post-single {
 	border-bottom: 1px solid $gray;
-	padding: 1em 0;
+	padding: 1rem 0;
+	@include at-least ( 40em ) {
+		padding: 1rem;
+	}
+	@include at-least ( 55em ) {
+		padding: 1.5rem;
+	}
+	&:last-of-type {
+		border-bottom: none;
+	}
 	h2, h3, h4, p {
 		margin: 0.8em 0 0.5em 0;
 	}
