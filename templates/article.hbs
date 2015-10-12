@@ -2,7 +2,7 @@
 	<section class="main-content">
 	{{#with content}}
 		<div class="post-single">
-			<h1>{{title}}</h1>
+			<h1>{{{title}}}</h1>
 			<div class="article-date">{{getDate 'MM-DD-YYYY' date}}</div>
 {{{main}}}
 			{{#isEqual env 'dev'}}
