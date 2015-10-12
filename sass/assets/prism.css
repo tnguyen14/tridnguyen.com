@@ -1,4 +1,4 @@
-/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+php+scss+bash+python+http+git&plugins=line-highlight+line-numbers+show-invisibles+show-language */
+/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+bash+docker+git+http+php+python+scss+vim+yaml&plugins=line-highlight+line-numbers+show-invisibles+file-highlight+show-language+remove-initial-line-feed */
 /**
  * prism.js default theme for JavaScript, CSS and HTML
  * Based on dabblet (http://dabblet.com)
@@ -9,12 +9,13 @@ code[class*="language-"],
 pre[class*="language-"] {
 	color: black;
 	text-shadow: 0 1px white;
-	font-family: Consolas, Monaco, 'Andale Mono', monospace;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	direction: ltr;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
 	word-break: normal;
+	word-wrap: normal;
 	line-height: 1.5;
 
 	-moz-tab-size: 4;
@@ -123,8 +124,12 @@ pre[class*="language-"] {
 	color: #e90;
 }
 
-.token.important {
+.token.important,
+.token.bold {
 	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
 }
 
 .token.entity {
@@ -225,34 +230,47 @@ pre.line-numbers > code {
 }
 
 .token.tab:not(:empty):before {
-	content: '▸';
+    content: '\21E5';
 }
 
 .token.cr:before {
-	content: '␍';
+    content: '\240D';
 }
 
-.token.lf:before {
-	content: '␊';
+.token.crlf:before {
+    content: '\240D\240A';
 }
-pre[class*='language-'] {
+.token.lf:before {
+    content: '\240A';
+}
+
+div.prism-show-language {
 	position: relative;
 }
-pre[class*='language-'] > code[data-language] {
-	overflow: scroll;
-	max-height: 28em;
-	display: block;
-}
-pre[class*='language-'] > code[data-language]::before {
-	content: attr(data-language);
+
+div.prism-show-language > div.prism-show-language-label[data-language] {
 	color: black;
 	background-color: #CFCFCF;
 	display: inline-block;
 	position: absolute;
+	bottom: auto;
+	left: auto;
 	top: 0;
 	right: 0;
+	width: auto;
+	height: auto;
 	font-size: 0.9em;
 	border-radius: 0 0 0 5px;
 	padding: 0 0.5em;
 	text-shadow: none;
+	z-index: 1;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-transform: none;
+	-moz-transform: none;
+	-ms-transform: none;
+	-o-transform: none;
+	transform: none;
 }
+
