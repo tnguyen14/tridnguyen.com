@@ -31,7 +31,7 @@ $(document).ready(function () {
 			// disable button to prevent double click
 			$(e.target).prop('disabled', true);
 			$.ajax({
-				url: 'http://api.tridnguyen.com/forms/52e49f41dd1cae0200000002',
+				url: 'https://api.tridnguyen.com/forms/52e49f41dd1cae0200000002',
 				data: $form.serialize(),
 				type: 'POST',
 				success: function () {
