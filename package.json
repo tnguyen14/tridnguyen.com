@@ -11,7 +11,16 @@
   },
   "main": "./js/app.js",
   "scripts": {
-    "lint": "jshint . --reporter node_modules/jshint-stylish/index.js && jscs ."
+    "lint": "jshint . --reporter node_modules/jshint-stylish/index.js && jscs .",
+	"copy": "cp CNAME dist/",
+    "css": "node-sass sass/main.scss | postcss -u autoprefixer | csso -o dist/css/main.css",
+    "css:watch": "node-sass -w sass/main.scss dist/css/main.css",
+    "js": "browserify js/app.js -o dist/js/app.js",
+    "js:watch": "watchify js/app.js -o dist/js/app.js -dv",
+	"serve": "http-server dist -p 4000",
+	"clean": "rm -rf dist && mkdir -p dist/css dist/js",
+	"build": "npm run clean && npm run copy && npm run css && npm run js",
+    "deploy": "npm run build && gh-pages -d dist -b master -r git@github.com/tnguyen14/tnguyen14.github.io.git"
   },
   "dependencies": {
     "handlebars": "^3.0.3",
@@ -22,8 +31,11 @@
     "underscore": "^1.8.3"
   },
   "devDependencies": {
+    "autoprefixer": "^6.3.6",
     "browserify": "^11.0.1",
     "browserify-shim": "^3.8.10",
+    "csso": "^2.2.0",
+    "gh-pages": "^0.11.0",
     "grunt": "~0.4.5",
     "grunt-autoprefixer": "^3.0.3",
     "grunt-browserify": "^4.0.0",
@@ -39,12 +51,15 @@
     "grunt-newer": "^1.1.1",
     "grunt-responsive-images": "~0.1.6",
     "grunt-tobiko": "^5.0.0",
+    "http-server": "^0.9.0",
     "jscs": "^2.1.0",
     "jshint": "^2.8.0",
     "jshint-stylish": "^2.0.1",
     "load-grunt-config": "^0.17.2",
     "load-grunt-tasks": "^3.2.0",
     "matchdep": "^0.3.0",
+    "node-sass": "^3.8.0",
+    "postcss-cli": "^2.5.2",
     "time-grunt": "^1.2.1"
   },
   "browserify": {
@@ -63,5 +78,6 @@
     "validation": {
       "depends": "jquery:jQuery"
     }
-  }
+  },
+  "license": "ISC"
 }
