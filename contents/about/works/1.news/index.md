@@ -9,7 +9,7 @@ feature:
 - view: news2-medium.png
   full: news2.png
   caption: "Main navigation menu"
-- view: news3-medium.png
+- view: news3.png
   full: news3.png
   caption: "Infinitely scrolling feed with filter navigation bar"
 ---
