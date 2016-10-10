@@ -1,7 +1,7 @@
 ---
 title: About
 template: about.hbs
-feature: at_upstatement-small.jpg
+feature: at_upstatement.jpg
 ---
 
 I make websites and web applications. I have worked with many Front End technologies, from basic HTML and CSS to complex JavaScript frameworks such as meteor.js. I am a fan of automated workflows - grunt.js and Vagrant have been such powerful tools that significantly improve my productivity, strip away the mundane tasks and allow me to focus on making decisions that are important to the users. On a daily basis, I go from making static site generators using grunt.js, to coding custom themes and functionalities in WordPress, to building JavaScript applications, and everything in between.

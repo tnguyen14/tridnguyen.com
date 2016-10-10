@@ -12,8 +12,8 @@
   "main": "./js/app.js",
   "scripts": {
     "lint": "jshint . --reporter node_modules/jshint-stylish/index.js && jscs .",
-	"font": "mkdir -p dist/fonts && find node_modules/font-awesome/fonts -iname 'fontawesome*' -exec cp -v \\{\\} dist/fonts/ \\;",
-	"lib": "find lib -type f \\( -iname \\*.js -o -iname \\*.css -o -iname \\*.png \\) -exec cp -v --parents \\{\\} dist \\;",
+    "font": "mkdir -p dist/fonts && find node_modules/font-awesome/fonts -iname 'fontawesome*' -exec cp -v \\{\\} dist/fonts/ \\;",
+    "lib": "find lib -type f \\( -iname \\*.js -o -iname \\*.css -o -iname \\*.png \\) -exec cp -v --parents \\{\\} dist \\;",
     "copy": "cp CNAME dist/ && npm run font && npm run lib",
     "css": "node-sass sass/main.scss | postcss -u autoprefixer | csso -o dist/css/main.css",
     "css:watch": "node-sass -w sass/main.scss dist/css/main.css",
@@ -26,7 +26,6 @@
     "deploy": "npm run build && gh-pages -d dist -b master -r git@github.com/tnguyen14/tnguyen14.github.io.git"
   },
   "dependencies": {
-    "bxslider": "^4.2.6",
     "fancybox": "^3.0.0",
     "font-awesome": "^4.6.3",
     "handlebars": "^3.0.3",
