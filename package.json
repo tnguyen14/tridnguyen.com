@@ -22,7 +22,7 @@
     "tobiko": "node bin/tobiko.js",
     "serve": "http-server dist -p 4000",
     "clean": "rm -rf dist && mkdir -p dist/css dist/js",
-    "build": "npm run clean && npm run copy && npm run css && npm run js",
+    "build": "npm run clean && npm run copy && npm run css && npm run js && npm run tobiko",
     "deploy": "npm run build && gh-pages -d dist -b master -r git@github.com/tnguyen14/tnguyen14.github.io.git"
   },
   "dependencies": {
