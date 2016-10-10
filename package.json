@@ -13,8 +13,8 @@
   "scripts": {
     "lint": "jshint . --reporter node_modules/jshint-stylish/index.js && jscs .",
 	"font": "mkdir -p dist/fonts && find node_modules/font-awesome/fonts -iname 'fontawesome*' -exec cp -v \\{\\} dist/fonts/ \\;",
-	"images": "cd contents && find . -type f \\( -iname *.jpg -o -iname *.png -o -iname *.svg \\) -exec cp --parents -v \\{\\} ../dist \\;",
-    "copy": "cp CNAME dist/ && npm run font && npm run images",
+	"lib": "find lib -type f \\( -iname \\*.js -o -iname \\*.css -o -iname \\*.png \\) -exec cp -v --parents \\{\\} dist \\;",
+    "copy": "cp CNAME dist/ && npm run font && npm run lib",
     "css": "node-sass sass/main.scss | postcss -u autoprefixer | csso -o dist/css/main.css",
     "css:watch": "node-sass -w sass/main.scss dist/css/main.css",
     "js": "browserify js/app.js -o dist/js/app.js",
