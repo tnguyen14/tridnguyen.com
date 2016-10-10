@@ -1,11 +1,10 @@
-/* global page */
+/* global page, jQuery */
 'use strict';
 var config = require('../config.json');
 var configDev = require('../config.dev.json');
 var _ = require('lodash');
-var $ = require('jquery');
+var $ = jQuery;
 
-require('bxslider');
 require('fancybox')($);
 
 if (page.env === 'dev') {
