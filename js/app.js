@@ -1,7 +1,7 @@
 /* global page */
 'use strict';
 var config = require('../config.json');
-var configDev = require('../config-dev.json');
+var configDev = require('../config.dev.json');
 var _ = require('lodash');
 var $ = require('jquery');
 
