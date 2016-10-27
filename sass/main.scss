@@ -1,11 +1,10 @@
 // Vendor Dependencies
-@import "assets/prism.css";
+@import "/lib/prism/prism.css";
 @import "global/_normalize";
-@import "../components/fancybox/source/jquery.fancybox.css";
+@import "../node_modules/fancybox/dist/scss/jquery.fancybox.scss";
 
 // Fonts
-$FontAwesomePath: "assets/font";
-@import "../components/font-awesome/scss/font-awesome";
+@import "../node_modules/font-awesome/scss/font-awesome";
 
 // Authored Dependencies
 @import "global/_bits";

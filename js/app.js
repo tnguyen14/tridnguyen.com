@@ -1,49 +1,36 @@
-/* global page */
+/* global page, jQuery */
 'use strict';
 var config = require('../config.json');
-var configDev = require('../config-dev.json');
+var configDev = require('../config.dev.json');
 var _ = require('lodash');
-var $ = require('jquery');
+var $ = jQuery;
 
-require('validation');
-require('bxslider');
-require('fancybox');
+require('fancybox')($);
 
 if (page.env === 'dev') {
 	_.extend(config, configDev);
 }
 
 $(document).ready(function () {
-	$('#contact input[type="submit"]').on('click', function (e) {
+	$('#contact').on('submit', function (e) {
 		e.preventDefault();
-		var $form = $('#contact');
-		$form.validate({
-			rules: {
-				name: 'required',
-				message: 'required',
-				email: {
-					required: true,
-					email: true
+		var $form = $(this);
+		var $button = $form.find('input[type="submit"]');
+		// disable button to prevent double click
+		$button.prop('disabled', true);
+		$.ajax({
+			url: 'https://api.tridnguyen.com/forms/52e49f41dd1cae0200000002',
+			data: $form.serialize(),
+			type: 'POST',
+			success: function () {
+				$form.html('<p>Thank you! Your message has been received. I will be in touch shortly.</p>');
+			},
+			error: function (error) {
+				if (error) {
+					$button.prop('disabled', false);
 				}
 			}
 		});
-		if ($form.valid()) {
-			// disable button to prevent double click
-			$(e.target).prop('disabled', true);
-			$.ajax({
-				url: 'https://api.tridnguyen.com/forms/52e49f41dd1cae0200000002',
-				data: $form.serialize(),
-				type: 'POST',
-				success: function () {
-					$form.html('<p>Thank you! Your message has been received. I will be in touch shortly.</p>');
-				},
-				error: function (error) {
-					if (error) {
-						$(e.target).prop('disabled', false);
-					}
-				}
-			});
-		}
 	});
 
 	// works
