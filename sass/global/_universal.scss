@@ -41,6 +41,13 @@ pre {
 	overflow-x: auto;
 }
 
+blockquote {
+	border-left: 5px solid $gray;
+	color: #666;
+	margin-left: 0;
+	padding-left: 1em;
+}
+
 .loader {
 	margin: 5em 0;
 	text-align: center;
