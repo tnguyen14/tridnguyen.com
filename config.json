@@ -1,1 +1,5 @@
-/Users/tri/Dropbox/dev/tridnguyen.com/config.json
+{
+	"siteUrl": "https://tridnguyen.com",
+	"siteName": "Tri Nguyen",
+	"tagline": "I make websites and web applications. Simple and minimal interfaces make me happy."
+}

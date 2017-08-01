@@ -1,15 +1,8 @@
 /* global page, jQuery */
-'use strict';
-var config = require('../config.json');
-var configDev = require('../config.dev.json');
-var _ = require('lodash');
+
 var $ = jQuery;
 
 require('fancybox')($);
-
-if (page.env === 'dev') {
-	_.extend(config, configDev);
-}
 
 $(document).ready(function () {
 	$('#contact').on('submit', function (e) {
