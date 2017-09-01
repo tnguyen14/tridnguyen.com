@@ -19,11 +19,12 @@
     "css:watch": "node-sass -w sass/main.scss dist/css/main.css",
     "js": "browserify js/app.js -o dist/js/app.js",
     "js:watch": "watchify js/app.js -o dist/js/app.js -dv",
-    "tobiko": "node bin/tobiko.js",
+    "tobiko": "tobiko",
     "serve": "http-server dist -p 4000",
     "clean": "rm -rf dist && mkdir -p dist/css dist/js",
     "build": "npm run clean && npm run copy && npm run css && npm run js && npm run tobiko",
-    "deploy": "npm run build && gh-pages -d dist -b master -r git@github.com:tnguyen14/tnguyen14.github.io.git"
+    "deploy": "npm run build && gh-pages -d dist -b master -r git@github.com:tnguyen14/tnguyen14.github.io.git",
+    "dev": "npm run serve & npm run js:watch & npm run css:watch & npm run tobiko -- -w"
   },
   "dependencies": {
     "fancybox": "^3.0.0",
@@ -47,7 +48,8 @@
     "jshint-stylish": "^2.0.1",
     "node-sass": "^3.8.0",
     "postcss-cli": "^2.5.2",
-    "tobiko": "^1.1.0"
+    "tobiko": "^1.2.3",
+    "watchify": "^3.9.0"
   },
   "license": "ISC"
 }
