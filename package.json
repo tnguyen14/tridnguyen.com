@@ -29,27 +29,27 @@
   "dependencies": {
     "fancybox": "^3.0.0",
     "font-awesome": "^4.6.3",
-    "handlebars": "^3.0.3",
+    "handlebars": "^4.0.11",
     "jquery": "^3.0.0",
     "js-yaml": "^3.4.0",
-    "lodash": "^3.10.1",
-    "marked": "^0.3.5",
-    "moment": "^2.10.6",
+    "lodash": "^4.17.10",
+    "marked": "^0.4.0",
+    "moment": "^2.22.2",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
-    "browserify": "^11.0.1",
+    "browserify": "^16.2.2",
     "csso": "^2.2.0",
     "gh-pages": "^0.11.0",
-    "http-server": "^0.9.0",
-    "jscs": "^2.1.0",
+    "http-server": "^0.11.1",
+    "jscs": "^3.0.7",
     "jshint": "^2.8.0",
     "jshint-stylish": "^2.0.1",
-    "node-sass": "^3.8.0",
+    "node-sass": "^4.9.2",
     "postcss-cli": "^2.5.2",
-    "tobiko": "^1.2.3",
-    "watchify": "^3.9.0"
+    "tobiko": "^1.2.5",
+    "watchify": "^3.11.0"
   },
   "license": "ISC"
 }
