@@ -12,5 +12,6 @@ deploy:
     target-branch: master
     fqdn: tridnguyen.com
     local_dir: dist
+    keep-history: true
     on:
       branch: master
