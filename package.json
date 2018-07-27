@@ -45,7 +45,7 @@
     "jshint-stylish": "^2.0.1",
     "node-sass": "^4.9.2",
     "postcss-cli": "^2.5.2",
-    "tobiko": "^1.2.5",
+    "tobiko": "^1.2.6",
     "watchify": "^3.11.0"
   },
   "license": "ISC"
