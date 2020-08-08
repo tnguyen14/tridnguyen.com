@@ -12,6 +12,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          # avoid using this token for the push
+          persist-credentials: 'false'
 
       - name: Checkout gh-pages repo
         uses: actions/checkout@v2
