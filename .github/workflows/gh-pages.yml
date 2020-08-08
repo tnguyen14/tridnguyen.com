@@ -13,6 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
+          # do not persist-credentials to allow git push to another repo
           persist-credentials: 'false'
 
       - name: Install deps
