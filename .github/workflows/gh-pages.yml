@@ -13,6 +13,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Checkout gh-pages repo
+        uses: actions/checkout@v2
+        with:
+          repository: tnguyen14/tnguyen14.github.io
+          path: dist
+
       - name: Install deps
         run: npm install
 
@@ -24,9 +30,8 @@ jobs:
         run: |
           git config --global user.name $GITHUB_ACTOR
           git config --global user.email "deploy@tridnguyen.com"
-          git add -f dist
+          cd dist
+          git add -f .
           git commit --no-verify -m "Update from commit tnguyen14/tridnguyen.com@$GITHUB_SHA"
-          git subtree split --prefix dist -b gh-pages
-          git remote add pages git@github.com:tnguyen14/tnguyen14.github.io.git
-          git push -f pages gh-pages:master
+          git push -f origin master:master
 
