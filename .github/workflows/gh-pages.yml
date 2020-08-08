@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+  repository_dispatch:
+    types: [dispatch] # as defined in https://github.com/gglukmann/wp-trigger-github/blob/master/wp-trigger-github.php#L55
 
 jobs:
   deploy:
