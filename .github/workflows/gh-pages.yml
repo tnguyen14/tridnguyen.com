@@ -23,7 +23,11 @@ jobs:
         run: npm install
 
       - name: Build
-        run: npm run build
+        run: |
+          # save the .git dir
+          mv dist/.git ./gh-pages.git
+          npm run build
+          mv gh-pages.git dist/.git
 
       - name: Deploy
         # subtree instructions from https://gist.github.com/tduarte/eac064b4778711b116bb827f8c9bef7b
@@ -31,7 +35,7 @@ jobs:
           git config --global user.name $GITHUB_ACTOR
           git config --global user.email "deploy@tridnguyen.com"
           cd dist
-          git add -f .
+          git add .
           git commit --no-verify -m "Update from commit tnguyen14/tridnguyen.com@$GITHUB_SHA"
           git push -f origin master:master
 
