@@ -1,4 +1,4 @@
-{
+module.exports = {
 	"contentsDir": "contents",
 	"config": "config.json",
 	"outDir": "dist",
@@ -24,4 +24,4 @@
 			}
 		}
 	}
-}
+};
