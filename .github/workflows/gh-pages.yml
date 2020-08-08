@@ -13,32 +13,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          # avoid using this token for the push
           persist-credentials: 'false'
-
-      - name: Checkout gh-pages repo
-        uses: actions/checkout@v2
-        with:
-          repository: tnguyen14/tnguyen14.github.io
-          path: dist
 
       - name: Install deps
         run: npm install
 
       - name: Build
-        run: |
-          # save the .git dir
-          mv dist/.git ./gh-pages.git
-          npm run build
-          mv gh-pages.git dist/.git
+        run: npm run build
 
       - name: Deploy
         # subtree instructions from https://gist.github.com/tduarte/eac064b4778711b116bb827f8c9bef7b
         run: |
           git config --global user.name $GITHUB_ACTOR
           git config --global user.email "deploy@tridnguyen.com"
-          cd dist
-          git add .
+          git add -f dist
           git commit --no-verify -m "Update from commit tnguyen14/tridnguyen.com@$GITHUB_SHA"
-          git push -f origin master:master
-
+          git subtree split --prefix dist -b gh-pages
+          git remote add gh-pages https://x-access-token:${{ secrets.GH_PAGES_TOKEN }}@github.com/tnguyen14/tnguyen14.github.io.git
+          git push -f gh-pages gh-pages:master
