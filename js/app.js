@@ -25,34 +25,4 @@ $(document).ready(function () {
 			}
 		});
 	});
-
-	// works
-	$('.feature-images').each(function () {
-		$(this).bxSlider({
-			'prevText': '',
-			'nextText': ''
-		});
-	});
-
-	$('.fancybox').fancybox();
-
-	$('.work-viewer').each(function () {
-		$(this).addClass('visuallyhidden');
-	});
-
-	var $viewers = $('.work-viewer');
-
-	$('.work-single').click(function () {
-		var slug = $(this).data('work'),
-			$viewer = $('#' + slug);
-
-		$('.work-single').not(this).removeClass('active');
-		$(this).addClass('active');
-
-		$viewers.not('#' + slug).removeClass('active').addClass('visuallyhidden');
-		$viewer.toggleClass('active').toggleClass('visuallyhidden');
-	});
-	$('.closeicon').click(function () {
-		$viewers.removeClass('active').addClass('visuallyhidden');
-	});
 });

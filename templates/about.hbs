@@ -9,22 +9,4 @@
 		{{{content.main}}}
 		{{> social-networks}}
 	</div><!-- .about -->
-
-	<div class="works">
-		<h2>Works</h2>
-		<div class="work-viewers">
-			{{#each works}}
-				{{#step 1}}
-					{{> work-viewer}}
-				{{/step}}
-			{{/each}}
-		</div><!-- .work-viewers -->
-		<div class="work-singles">
-			{{#each works}}
-				{{#step 1}}
-					{{> work-single}}
-				{{/step}}
-			{{/each}}{{! works}}
-		</div><!-- .work-singles -->
-	</div><!-- .works -->
 {{> footer}}
