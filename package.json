@@ -16,11 +16,10 @@
     "js": "browserify js/app.js -o dist/js/app.js",
     "js:watch": "watchify js/app.js -o dist/js/app.js -dv",
     "tobiko": "tobiko",
-    "serve": "http-server dist -p 4000",
     "clean": "rm -rf dist && mkdir -p dist/css dist/js",
     "build": "npm run clean && npm run copy && npm run css && npm run js && npm run tobiko",
     "deploy": "npm run build && gh-pages -d dist -b master -r git@github.com:tnguyen14/tnguyen14.github.io.git",
-    "dev": "npm run serve & npm run js:watch & npm run css:watch & npm run tobiko -- -w"
+    "dev": "npm run js:watch & npm run css:watch & npm run tobiko -- -w"
   },
   "dependencies": {
     "fancybox": "^3.0.0",
@@ -38,7 +37,6 @@
     "browserify": "^16.2.2",
     "csso": "^2.2.0",
     "gh-pages": "^3.1.0",
-    "http-server": "^0.12.3",
     "node-sass": "^4.14.1",
     "postcss-cli": "^8.3.1",
     "tobiko": "^1.2.9",
