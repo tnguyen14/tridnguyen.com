@@ -1,5 +1,5 @@
-/* PrismJS 1.21.0
-https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+bash+docker+git+go+groovy+handlebars+hcl+http+java+json+markdown+markup-templating+php+scss+vim+yaml&plugins=line-highlight+line-numbers+show-invisibles+file-highlight+show-language+normalize-whitespace+toolbar */
+/* PrismJS 1.23.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+bash+docker+git+go+groovy+handlebars+hcl+http+java+json+markdown+markup-templating+php+jsx+scss+vim+yaml&plugins=line-highlight+line-numbers+show-invisibles+file-highlight+show-language+normalize-whitespace+toolbar */
 /**
  * prism.js default theme for JavaScript, CSS and HTML
  * Based on dabblet (http://dabblet.com)
@@ -160,6 +160,17 @@ pre[data-line] {
 
 	line-height: inherit;
 	white-space: pre;
+}
+
+@media print {
+	.line-highlight {
+		/*
+		 * This will prevent browsers from replacing the background color with white.
+		 * It's necessary because the element is layered on top of the displayed code.
+		 */
+		-webkit-print-color-adjust: exact;
+		color-adjust: exact;
+	}
 }
 
 	.line-highlight:before,
