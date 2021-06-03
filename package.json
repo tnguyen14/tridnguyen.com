@@ -38,6 +38,7 @@
     "csso": "^2.2.0",
     "gh-pages": "^3.1.0",
     "node-sass": "^6.0.0",
+    "postcss": "^8.3.0",
     "postcss-cli": "^8.3.1",
     "tobiko": "^1.2.9",
     "watchify": "^3.11.1"
