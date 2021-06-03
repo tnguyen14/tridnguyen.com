@@ -30,7 +30,7 @@
     "jquery": "^3.5.1",
     "js-yaml": "^3.14.0",
     "lodash": "^4.17.19",
-    "marked": "^1.1.1",
+    "marked": "^2.0.7",
     "moment": "^2.22.2",
     "underscore": "^1.8.3"
   },
@@ -40,11 +40,11 @@
     "csso": "^2.2.0",
     "gh-pages": "^3.1.0",
     "http-server": "^0.12.3",
-    "jscs": "^3.0.7",
+    "jscs": "^2.1.1",
     "jshint": "^2.12.0",
     "jshint-stylish": "^2.0.1",
     "node-sass": "^4.14.1",
-    "postcss-cli": "^7.1.1",
+    "postcss-cli": "^8.3.1",
     "tobiko": "^1.2.9",
     "watchify": "^3.11.1"
   },
